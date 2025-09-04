@@ -45,8 +45,9 @@ blockquote {
 <body>
 <main>
 <br>
-<p><a href="../">back to home</a></p>
+<p><a href="./index.html">back to home</a></p>
 <h1>OGN Challenge #7</h1>
+<p>This challenge can be found where Roanoke gives Wheeler a wallet ID.</p>
 <h2>The Setup</h2>
 <blockquote>
 <p>Wheeler wants to transfer the funds from the card, but we need some personal information. The account seems to be linked to Darius Gift, who had an obituary published recently. Can you gather the information we need and gain access to the funds?</p>
@@ -98,16 +99,18 @@ MessagePack::unpack(Base64::decode(data))
 }
 </code></pre>
 <p>Perfect! The sender account number is <strong>36868827150044</strong>.</p>
-<h2>Part 2: Finding Darius Gift's Personal Info</h2>
-<p>The remaining three security questions can be answered by locating Darius Gift's obituary in the comic.</p>
+<h3>Part 2: Finding Darius Gift's Personal Info</h3>
+<p>The remaining three security questions can be answered by locating Darius Gift's obituary in the comic.
+You can find it a few pages before the challenge's indicator.</p>
 <ul>
-<li><strong>Agent name</strong>: TODO</li>
-<li><strong>Current city</strong>: TODO</li>
-<li><strong>First published work title</strong>: TODO</li>
+<li><strong>Agent name</strong>: David Lebling II</li>
+<li><strong>Current city</strong>: Bangkok</li>
+<li><strong>First published work title</strong>: The Shadow Factory</li>
 </ul>
-<h2>Part 3: Completing the Transfer</h2>
+<h3>Part 3: Completing the Transfer</h3>
 <p>Once we have all four pieces of information, we can fill out the Tropic Bank form and complete the fund transfer.</p>
-<p>TODO</p>
+<p>The interface asks us for a <strong>pin</strong>, which we have decoded previously as part of the card data: <strong>4760</strong>.</p>
+<p>Congrats, we've got the flag!</p>
 <br>
 <footer>
 <p>

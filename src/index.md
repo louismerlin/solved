@@ -53,8 +53,6 @@ Coming Soon
 
 ### [Challenge #7](./01_7.html)
 
-You'll find the URL for challenge #7 on page TODO.
-
 ### Challenge #8
 
 We're not allowed to share this one, but maybe you can find a second-hand copy of the Kickstarter edition of OGN on eBay, that's what I did.
