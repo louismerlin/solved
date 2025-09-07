@@ -60,24 +60,30 @@ blockquote {
 <main>
 <br>
 <p><a href="./index.html">back to home</a></p>
-<h1>OGN Challenge #6</h1>
-<p>This challenge can be found when Roanoke goes back to his office to watch the disk's content.</p>
+<h1>OGN Challenge #5</h1>
+<p>This challenge can be found when Sally and Slim are hacking into the targeting system, the page before the terminal explodes.</p>
 <h2>The Setup</h2>
 <blockquote>
-<p>We obtained an image of a disc drive. We've found that it uses a futuristic technology called &quot;Blu-Ray&quot;, but we can't seem to get any video playing from the disc image itself.</p>
-<p>Can you help us?</p>
+<p>Help Sally and Slim disable voltage protection on the Lunar Mass Driver!</p>
 </blockquote>
-<p>You'll find a disc image on the webpage, in the <code>.iso</code> disk format.</p>
-<h2>Reading the disk</h2>
-<p>The first thing I do when getting a file that is supposed to represent raw data (image, video, binary blob) is run <code>strings</code> on the document. <code>strings</code> will, according to its man page, <em>print the sequences of printable characters in files</em>.</p>
-<pre><code class="language-bash">$ strings DG_FINAL_PARTIAL_DUMP.ISO | grep key
-ias=0 direct=3 weightb=1 open_gop=0 weightp=2 keyint=250 keyint_min=24 scenecut=40 intra_refresh=0 rc_lookahead=50 rc=crf mbtree=1 crf=20.0 qcomp=0.60 qpmin=0 qpmax=69 qpstep=4 ip_rati
-
-$ strings DG_FINAL_PARTIAL_DUMP.ISO | grep KEY
-
-</code></pre>
-<p>Alright no luck. The challenge description mentions &quot;Blu-Ray&quot;, let's search for more info. Searching &quot;how to open bluray iso&quot; on duckduckgo, the first result mentions that VLC can open many Blu-Ray ISO files directly. Let's try it!</p>
-<p>The flag appears in the VLC player right when you open it up, that's a win for VLC \o/</p>
+<p>You'll find a link to a dashboard on the challenge page.</p>
+<h2>Disabling voltage protection</h2>
+<p>Let's try going through what a user would do when faced with this dashboard:</p>
+<ol>
+<li>There is only one button, that corresponds to what we're trying to do (<em>disable voltage regulation</em>). Click on that.</li>
+<li>There is a warning dialogue about the consequences of this action. The <em>Yes</em> button is unclickable.</li>
+</ol>
+<p>This is a classic CTF challenge (and security flaw in many more websites than you'd imagine): the unclickable button can actually be clicked, if you modify the page's code.
+You'll need to have access to your browser's inspector. For Safari, enable Develop menu in Preferences &gt; Advanced first. For other browsers it should be fine.
+Right-click on the button, and click <em>Inspect</em>.
+Notice how the <em>Yes (Disabled)</em> button tag has the <code>disabled=&quot;&quot;</code> field attached to it.
+Double-click on <code>disabled=&quot;&quot;</code> and delete it, then press Enter.
+The button is now clickable! Magic 🧙</p>
+<p>The voltage protection is now disabled, and you get a nice flag to add to your collection 🚩</p>
+<fieldset class="hacker-note">
+  <legend>Hacker Mindset</legend>
+  <p>This technique works because client-side validation can always be bypassed by users. In real applications, security checks must be enforced server-side.</p>
+</fieldset>
 <br>
 <footer>
 <p>
