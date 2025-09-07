@@ -47,9 +47,11 @@ It contains 7 challenges, plus the cover challenge and an additional challenge i
 
 Coming Soon
 
-### Challenge #1 - #6
+### Challenge #1 - #5
 
 Coming Soon
+
+### [Challenge #6](./01_6.html)
 
 ### [Challenge #7](./01_7.html)
 

@@ -45,56 +45,26 @@ blockquote {
 <body>
 <main>
 <br>
-<h1>THE FUTURE IS <span id="puzzle">******</span></h1>
-<script>
-const el = document.getElementById('puzzle');
-const target = 'SOLVED';
-let pos = 0;
+<p><a href="./index.html">back to home</a></p>
+<h1>OGN Challenge #6</h1>
+<p>This challenge can be found {}.</p>
+<h2>The Setup</h2>
+<blockquote>
+<p>We obtained an image of a disc drive. We've found that it uses a futuristic technology called &quot;Blu-Ray&quot;, but we can't seem to get any video playing from the disc image itself.</p>
+<p>Can you help us?</p>
+</blockquote>
+<p>You'll find a disc image on the webpage, in the <code>.iso</code> disk format.</p>
+<h2>Reading the disk</h2>
+<p>The first thing I do when getting a file that is supposed to represent raw data (image, video, binary blob) is run <code>strings</code> on the document. <code>strings</code> will, according to its man page, <em>print the sequences of printable characters in files</em>.</p>
+<pre><code class="language-bash">$ strings DG_FINAL_PARTIAL_DUMP.ISO | grep key
+ias=0 direct=3 weightb=1 open_gop=0 weightp=2 keyint=250 keyint_min=24 scenecut=40 intra_refresh=0 rc_lookahead=50 rc=crf mbtree=1 crf=20.0 qcomp=0.60 qpmin=0 qpmax=69 qpstep=4 ip_rati
 
-function flick() {
-    if (pos >= target.length) return;
-    
-    let current = el.textContent;
-    let charCode = 65;
-    
-    const interval = setInterval(() => {
-        current = current.substring(0, pos) + String.fromCharCode(charCode) + current.substring(pos + 1);
-        el.textContent = current;
-        
-        if (charCode === target.charCodeAt(pos)) {
-            clearInterval(interval);
-            pos++;
-            setTimeout(flick, 50);
-        }
-        
-        charCode = charCode === 90 ? 65 : charCode + 1;
-    }, 50);
-}
+$ strings DG_FINAL_PARTIAL_DUMP.ISO | grep KEY
 
-setTimeout(flick, 1000);
-</script>
-<p>On this website, I'll show you how to solve challenges from <strong>THE FUTURE IS ******</strong> from <a href="https://www.blackhillsinfosec.com/rekcah/">REKAH Comics</a>.</p>
-<p>Here are links to other people who are doing the same thing:</p>
-<ul>
-<li><a href="https://github.com/setral/CTF_Writeups/tree/main/The%20Future%20is%20******">Setral's GitHub repo</a></li>
-<li><a href="https://www.skycritch.com/the-future-is/">Skycritch's website</a></li>
-</ul>
-<br>
-<h2>01 - OGN</h2>
-<p>The OGN issue came out on May 28th 2025.</p>
-<p>It contains 7 challenges, plus the cover challenge and an additional challenge in the kickstarter edition.</p>
-<h3>Cover Challenge</h3>
-<p>Coming Soon</p>
-<h3>Challenge #1 - #5</h3>
-<p>Coming Soon</p>
-<h3><a href="./01_6.html">Challenge #6</a></h3>
-<h3><a href="./01_7.html">Challenge #7</a></h3>
-<h3>Challenge #8</h3>
-<p>We're not allowed to share this one, but maybe you can find a second-hand copy of the Kickstarter edition of OGN on eBay, that's what I did.</p>
-<br>
-<h2>02 - MARTINA</h2>
-<p>The Martina issue came out June 11th 2025.</p>
-<p>Waiting on the 3-month solution embargo, look back here soon.</p>
+</code></pre>
+<p>Allright no luck. The challenge description mentions &quot;Blu-Ray&quot;, let's search for more info. Searching &quot;how to open bluray iso&quot; on duckduckgo, the first result mentions that VLC can open many Blu-Ray ISO files directly. Let's try it!</p>
+<p>Here is the flag!</p>
+<p>That's a win for VLC \o/</p>
 <br>
 <footer>
 <p>
