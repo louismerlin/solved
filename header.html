@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>THE FUTURE IS SOLVED</title>
+<title>The Future Is SOLVED</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
 /*! concrete.css v3.0.0 | MIT License | github.com/louismerlin/concrete.css */
@@ -53,6 +53,47 @@ blockquote {
 }
 .hacker-note > p {
   margin: 0;
+}
+.row {
+  display: flex;
+  flex-direction: column-reverse;
+  padding: 0;
+}
+.row .column {
+  display: block;
+  flex: 1 1 auto;
+  margin-left: 0;
+  max-width: 100%;
+  width: 100%;
+}
+img {
+  image-rendering: pixelated;
+  width: 100%;
+}
+
+@media (min-width: 30.0rem) {
+  .row {
+    flex-direction: row;
+    margin: 0 -.5rem;
+    width: calc(100% + 1rem);
+    align-items: stretch;
+  }
+
+  .row .column {
+    margin-bottom: inherit;
+    padding: 0 .5rem;
+  }
+
+  .row .column.img-column {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+  }
+
+  .row .column.img-column img {
+    max-width: 50%;
+    box-shadow: 0 0 .5rem #111;
+  }
 }
 </style>
 </head>

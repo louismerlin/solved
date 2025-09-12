@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>THE FUTURE IS SOLVED</title>
+<title>The Future Is SOLVED</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
 /*! concrete.css v3.0.0 | MIT License | github.com/louismerlin/concrete.css */
@@ -54,6 +54,47 @@ blockquote {
 .hacker-note > p {
   margin: 0;
 }
+.row {
+  display: flex;
+  flex-direction: column-reverse;
+  padding: 0;
+}
+.row .column {
+  display: block;
+  flex: 1 1 auto;
+  margin-left: 0;
+  max-width: 100%;
+  width: 100%;
+}
+img {
+  image-rendering: pixelated;
+  width: 100%;
+}
+
+@media (min-width: 30.0rem) {
+  .row {
+    flex-direction: row;
+    margin: 0 -.5rem;
+    width: calc(100% + 1rem);
+    align-items: stretch;
+  }
+
+  .row .column {
+    margin-bottom: inherit;
+    padding: 0 .5rem;
+  }
+
+  .row .column.img-column {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+  }
+
+  .row .column.img-column img {
+    max-width: 50%;
+    box-shadow: 0 0 .5rem #111;
+  }
+}
 </style>
 </head>
 <body>
@@ -69,15 +110,16 @@ blockquote {
 </blockquote>
 <p>You'll find a disc image on the webpage, in the <code>.iso</code> disk format.</p>
 <h2>Reading the disk</h2>
-<p>The first thing I do when getting a file that is supposed to represent raw data (image, video, binary blob) is run <code>strings</code> on the document. <code>strings</code> will, according to its man page, <em>print the sequences of printable characters in files</em>.</p>
+<p>When examining files that represent raw data (image, video, binary blob), a useful first step is to run <code>strings</code> on the document. <code>strings</code> will, according to its man page, <em>print the sequences of printable characters in files</em>.</p>
 <pre><code class="language-bash">$ strings DG_FINAL_PARTIAL_DUMP.ISO | grep key
 ias=0 direct=3 weightb=1 open_gop=0 weightp=2 keyint=250 keyint_min=24 scenecut=40 intra_refresh=0 rc_lookahead=50 rc=crf mbtree=1 crf=20.0 qcomp=0.60 qpmin=0 qpmax=69 qpstep=4 ip_rati
 
 $ strings DG_FINAL_PARTIAL_DUMP.ISO | grep KEY
 
 </code></pre>
-<p>Alright no luck. The challenge description mentions &quot;Blu-Ray&quot;, let's search for more info. Searching &quot;how to open bluray iso&quot; on duckduckgo, the first result mentions that VLC can open many Blu-Ray ISO files directly. Let's try it!</p>
-<p>The flag appears in the VLC player right when you open it up, that's a win for VLC \o/</p>
+<p>No luck there. The challenge description mentions &quot;Blu-Ray&quot;, so searching for more info is the next step. Searching &quot;how to open bluray iso&quot; reveals that VLC can open many Blu-Ray ISO files directly.</p>
+<p>The flag appears in the VLC player immediately after opening the ISO file.</p>
+<br>
 <br>
 <footer>
 <p>

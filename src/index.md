@@ -28,7 +28,7 @@ function flick() {
 setTimeout(flick, 1000);
 </script>
 
-On this website, I'll show you how to solve challenges from **THE FUTURE IS \*\*\*\*\*\*** from [REKAH Comics](https://www.blackhillsinfosec.com/rekcah/).
+On this website, I'll show you how to solve challenges from *The Future Is \*\*\*\*\*\** from [REKAH Comics](https://www.blackhillsinfosec.com/rekcah/).
 
 Here are links to other people who are doing the same thing:
 
@@ -39,17 +39,24 @@ Here are links to other people who are doing the same thing:
 
 ## 01 - OGN
 
+<div class="row">
+<div class="column">
+
+
 The OGN issue came out on May 28th 2025.
 
-It contains 7 challenges, plus the cover challenge and an additional challenge in the kickstarter edition.
 
-### Cover Challenge
+### [Cover Challenge](./01_cover.html)
 
-Coming Soon
+### [Crack the \*\*\*\*\*\*](./01_crack.html)
 
-### Challenge #1 - #4
+### [Challenge #1](./01_1.html)
 
-Coming Soon
+### [Challenge #2](./01_2.html)
+
+### [Challenge #3](./01_3.html)
+
+### [Challenge #4](./01_4.html)
 
 ### [Challenge #5](./01_5.html)
 
@@ -61,10 +68,24 @@ Coming Soon
 
 We're not allowed to share this one, but maybe you can find a second-hand copy of the Kickstarter edition of OGN on eBay, that's what I did.
 
+</div>
+<div class="column img-column">
+<img alt="OGN Cover" src="./images/01.jpg">
+</div>
+</div>
+
 <br>
 
 ## 02 - MARTINA
 
-The Martina issue came out June 11th 2025.
+<div class="row">
+<div class="column">
+The MARTINA issue came out on June 11th 2025.
 
 Waiting on the 3-month solution embargo, look back here soon.
+</div>
+
+<div class="column img-column">
+<img alt="OGN Cover" src="./images/02.jpg">
+</div>
+</div>

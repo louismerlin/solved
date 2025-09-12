@@ -100,72 +100,24 @@ img {
 <body>
 <main>
 <br>
-<h1>THE FUTURE IS <span id="puzzle">******</span></h1>
-<script>
-const el = document.getElementById('puzzle');
-const target = 'SOLVED';
-let pos = 0;
-
-function flick() {
-    if (pos >= target.length) return;
-    
-    let current = el.textContent;
-    let charCode = 65;
-    
-    const interval = setInterval(() => {
-        current = current.substring(0, pos) + String.fromCharCode(charCode) + current.substring(pos + 1);
-        el.textContent = current;
-        
-        if (charCode === target.charCodeAt(pos)) {
-            clearInterval(interval);
-            pos++;
-            setTimeout(flick, 50);
-        }
-        
-        charCode = charCode === 90 ? 65 : charCode + 1;
-    }, 50);
-}
-
-setTimeout(flick, 1000);
-</script>
-<p>On this website, I'll show you how to solve challenges from <em>The Future Is ******</em> from <a href="https://www.blackhillsinfosec.com/rekcah/">REKAH Comics</a>.</p>
-<p>Here are links to other people who are doing the same thing:</p>
-<ul>
-<li><a href="https://github.com/setral/CTF_Writeups/tree/main/The%20Future%20is%20******">Setral's GitHub repo</a></li>
-<li><a href="https://www.skycritch.com/the-future-is/">Skycritch's website</a></li>
-</ul>
-<br>
-<h2>01 - OGN</h2>
-<div class="row">
-<div class="column">
-<p>The OGN issue came out on May 28th 2025.</p>
-<h3><a href="./01_cover.html">Cover Challenge</a></h3>
-<h3><a href="./01_crack.html">Crack the ******</a></h3>
-<h3><a href="./01_1.html">Challenge #1</a></h3>
-<h3><a href="./01_2.html">Challenge #2</a></h3>
-<h3><a href="./01_3.html">Challenge #3</a></h3>
-<h3><a href="./01_4.html">Challenge #4</a></h3>
-<h3><a href="./01_5.html">Challenge #5</a></h3>
-<h3><a href="./01_6.html">Challenge #6</a></h3>
-<h3><a href="./01_7.html">Challenge #7</a></h3>
-<h3>Challenge #8</h3>
-<p>We're not allowed to share this one, but maybe you can find a second-hand copy of the Kickstarter edition of OGN on eBay, that's what I did.</p>
-</div>
-<div class="column img-column">
-<img alt="OGN Cover" src="./images/01.jpg">
-</div>
-</div>
-<br>
-<h2>02 - MARTINA</h2>
-<div class="row">
-<div class="column">
-The MARTINA issue came out on June 11th 2025.
-<p>Waiting on the 3-month solution embargo, look back here soon.</p>
-</div>
-<div class="column img-column">
-<img alt="OGN Cover" src="./images/02.jpg">
-</div>
-</div>
+<p><a href="./index.html">back to home</a></p>
+<h1>OGN Challenge #1</h1>
+<p>This challenge can be found when Dmitri aims his &quot;smart&quot; gun at Wheeler.</p>
+<h2>The Setup</h2>
+<blockquote>
+<p>Wheeler has gained access to the pirates' smart rifles via an interactive console. Help him take control of them!</p>
+</blockquote>
+<p>You will also get a console access command that uses the <code>nc</code> (netcat) command, and a python script for the server code.</p>
+<h2>The Decryption</h2>
+<p>Taking a look at the administrator login logic, we notice that the password that we input is compared to <code>admin_pw</code>.
+This variable is computed on the fly, using a static hard-coded value.
+If we execute the same computation, we should get the admin password in plaintext:</p>
+<pre><code>admin_pw_encrypted = '6d6e71775b7174727b7d6f6f536460506479774c677877656c4668727a717b40494f46565751545e'
+admin_pw = ''.join(chr(ord(c) ^ i) for i, c in enumerate(bytes.fromhex(admin_pw_encrypted).decode(&quot;utf-8&quot;)))
+print(admin_pw)
+</code></pre>
+<p>Success! The password is <code>most_trusted_in_the_smart_rifle_industry</code>.</p>
+<p>Now, getting the flag requires you to connect to the server using the given command, pressing <code>2</code> to enter the admin login, entering the password, and then pressing <code>1</code> to activate the FRIEND-OR-FOE system.</p>
 <br>
 <br>
 <footer>
