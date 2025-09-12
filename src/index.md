@@ -81,9 +81,9 @@ We're not allowed to share this one, but maybe you can find a second-hand copy o
 
 The MARTINA issue came out on June 11th 2025.
 
-### [Cover Challenge](./01_cover.html)
+### [Cover Challenge](./02_cover.html)
 
-### [Crack the \*\*\*\*\*\*](./01_crack.html)
+### [Crack the \*\*\*\*\*\*](./02_crack.html)
 
 ### [Challenge #1 - White Wolf](./02_1.html)
 
