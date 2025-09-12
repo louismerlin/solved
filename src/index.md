@@ -42,9 +42,7 @@ Here are links to other people who are doing the same thing:
 <div class="row">
 <div class="column">
 
-
 The OGN issue came out on May 28th 2025.
-
 
 ### [Cover Challenge](./01_cover.html)
 
@@ -80,12 +78,70 @@ We're not allowed to share this one, but maybe you can find a second-hand copy o
 
 <div class="row">
 <div class="column">
+
 The MARTINA issue came out on June 11th 2025.
 
-Waiting on the 3-month solution embargo, look back here soon.
+### [Cover Challenge](./01_cover.html)
+
+### [Crack the \*\*\*\*\*\*](./01_crack.html)
+
+### [Challenge #1 - White Wolf](./02_1.html)
+
+### [Challenge #2 - Penance](./02_2.html)
+
+</div>
+<div class="column img-column">
+<img alt="MARTINA Cover" src="./images/02.jpg">
+</div>
 </div>
 
+<br>
+
+## 03 - ELI
+
+<div class="row">
+<div class="column">
+
+The ELI issue came out on July 9th 2025.
+
+Waiting on the 3-month solution embargo, look back here soon.
+
+</div>
 <div class="column img-column">
-<img alt="OGN Cover" src="./images/02.jpg">
+<img alt="ELI Cover" src="./images/03.jpg">
+</div>
+</div>
+
+<br>
+
+## 04 - SALLY
+
+<div class="row">
+<div class="column">
+
+The SALLY issue came out on August 13th 2025.
+
+Waiting on the 3-month solution embargo, look back here soon.
+
+</div>
+<div class="column img-column">
+<img alt="SALLY Cover" src="./images/04.jpg">
+</div>
+</div>
+
+<br>
+
+## 05 - ART/ARF 
+
+<div class="row">
+<div class="column">
+
+The ART/ARF issue came out on September 10th 2025.
+
+Waiting on the 3-month solution embargo, look back here soon.
+
+</div>
+<div class="column img-column">
+<img alt="ART/ARF Cover" src="./images/05.jpg">
 </div>
 </div>
