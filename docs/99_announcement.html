@@ -100,115 +100,14 @@ img {
 <body>
 <main>
 <br>
-<h1>THE FUTURE IS <span id="puzzle">******</span></h1>
-<script>
-const el = document.getElementById('puzzle');
-const target = 'SOLVED';
-let pos = 0;
-
-function flick() {
-    if (pos >= target.length) return;
-    
-    let current = el.textContent;
-    let charCode = 65;
-    
-    const interval = setInterval(() => {
-        current = current.substring(0, pos) + String.fromCharCode(charCode) + current.substring(pos + 1);
-        el.textContent = current;
-        
-        if (charCode === target.charCodeAt(pos)) {
-            clearInterval(interval);
-            pos++;
-            setTimeout(flick, 50);
-        }
-        
-        charCode = charCode === 90 ? 65 : charCode + 1;
-    }, 50);
-}
-
-setTimeout(flick, 1000);
-</script>
-<p>On this website, I'll show you how to solve challenges from <em>The Future Is ******</em> from <a href="https://www.blackhillsinfosec.com/rekcah/">REKAH Comics</a>.</p>
-<p>Here are links to other people who are doing the same thing:</p>
-<ul>
-<li><a href="https://github.com/setral/CTF_Writeups/tree/main/The%20Future%20is%20******">Setral's GitHub repo</a></li>
-<li><a href="https://www.skycritch.com/the-future-is/">Skycritch's website</a></li>
-<li><a href="https://itsjoshb.com/blog/martina-white-wolf/">joshb's blog</a></li>
-</ul>
-<br>
-<h2>01 - OGN</h2>
-<div class="row">
-<div class="column">
-<p>The OGN issue came out on May 28th 2025.</p>
-<h3><a href="./01_cover.html">Cover Challenge</a></h3>
-<h3><a href="./01_crack.html">Crack the ******</a></h3>
-<h3><a href="./01_1.html">Challenge #1</a></h3>
-<h3><a href="./01_2.html">Challenge #2</a></h3>
-<h3><a href="./01_3.html">Challenge #3</a></h3>
-<h3><a href="./01_4.html">Challenge #4</a></h3>
-<h3><a href="./01_5.html">Challenge #5</a></h3>
-<h3><a href="./01_6.html">Challenge #6</a></h3>
-<h3><a href="./01_7.html">Challenge #7</a></h3>
-<h3>Challenge #8</h3>
-<p>We're not allowed to share this one, but maybe you can find a second-hand copy of the Kickstarter edition of OGN on eBay, that's what I did.</p>
-</div>
-<div class="column img-column">
-<img alt="OGN Cover" src="./images/01.jpg">
-</div>
-</div>
-<br>
-<h2>99 - Other</h2>
-<h3><a href="./99_announcement.html">Kickstarter Announcement</a></h3>
-<h3><a href="./99_kickstarter.html">Kickstarter Challenges</a></h3>
-<h3><a href="./99_ashcan.html">Ashcan Challenge</a></h3>
-<br>
-<h2>02 - MARTINA</h2>
-<div class="row">
-<div class="column">
-<p>The MARTINA issue came out on June 11th 2025.</p>
-<h3><a href="./02_cover.html">Cover Challenge</a></h3>
-<h3><a href="./02_crack.html">Crack the ******</a></h3>
-<h3><a href="./02_1.html">Challenge #1 - White Wolf</a></h3>
-<h3><a href="./02_2.html">Challenge #2 - Penance</a></h3>
-</div>
-<div class="column img-column">
-<img alt="MARTINA Cover" src="./images/02.jpg">
-</div>
-</div>
-<br>
-<h2>03 - ELI</h2>
-<div class="row">
-<div class="column">
-<p>The ELI issue came out on July 9th 2025.</p>
-<p>Waiting on the 3-month solution embargo, look back here soon.</p>
-</div>
-<div class="column img-column">
-<img alt="ELI Cover" src="./images/03.jpg">
-</div>
-</div>
-<br>
-<h2>04 - SALLY</h2>
-<div class="row">
-<div class="column">
-<p>The SALLY issue came out on August 13th 2025.</p>
-<p>Waiting on the 3-month solution embargo, look back here soon.</p>
-</div>
-<div class="column img-column">
-<img alt="SALLY Cover" src="./images/04.jpg">
-</div>
-</div>
-<br>
-<h2>05 - ART/ARF</h2>
-<div class="row">
-<div class="column">
-<p>The ART/ARF issue came out on September 10th 2025.</p>
-<p>Waiting on the 3-month solution embargo, look back here soon.</p>
-</div>
-<div class="column img-column">
-<img alt="ART/ARF Cover" src="./images/05.jpg">
-</div>
-</div>
-<br>
+<p><a href="./index.html">back to home</a></p>
+<h1>Kickstarter Announcement</h1>
+<p>The <a href="https://x.com/BHinfoSecurity/status/1765837749611905455">social media announcement</a> for the TFI kickstarter has an image attached.</p>
+<p><img src="./images/announcement.jpg" alt="image from the announcement" /></p>
+<p>This image has a pretty interesting string of digits on the side.</p>
+<p>I immediately thought of <a href="https://en.wikipedia.org/wiki/ASCII">ASCII</a> character codes, but now the tricky part is: how do you separate the characters?</p>
+<p>Here is something helpful to know about ASCII character codes: 0 to 31 are invisible symbols. This means the first group of digits are most likely not &quot;1&quot; or &quot;10&quot; but &quot;104&quot;, which corresponds to &quot;h&quot;.</p>
+<p>Using this logic on the rest of the digits, you end up with an https URL, which gives us the flag, as well as a few hints for the <a href="./99_kickstarter.html">kickstarter challenges</a>.</p>
 <br>
 <br>
 <footer>

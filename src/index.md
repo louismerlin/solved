@@ -34,6 +34,7 @@ Here are links to other people who are doing the same thing:
 
 - [Setral's GitHub repo](https://github.com/setral/CTF_Writeups/tree/main/The%20Future%20is%20******)
 - [Skycritch's website](https://www.skycritch.com/the-future-is/)
+- [joshb's blog](https://itsjoshb.com/blog/martina-white-wolf/)
 
 <br>
 
@@ -71,6 +72,16 @@ We're not allowed to share this one, but maybe you can find a second-hand copy o
 <img alt="OGN Cover" src="./images/01.jpg">
 </div>
 </div>
+
+<br>
+
+## 99 - Other
+
+### [Kickstarter Announcement](./99_announcement.html)
+
+### [Kickstarter Challenges](./99_kickstarter.html)
+
+### [Ashcan Challenge](./99_ashcan.html)
 
 <br>
 
@@ -145,3 +156,5 @@ Waiting on the 3-month solution embargo, look back here soon.
 <img alt="ART/ARF Cover" src="./images/05.jpg">
 </div>
 </div>
+
+<br>

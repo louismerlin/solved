@@ -16,6 +16,7 @@ This page leads us to discover the [Bifid cipher](https://en.wikipedia.org/wiki/
 
 Let's try the decryption method for this cipher:
 
+```
 | \ | 1 | 2 | 3 | 4 | 5 |
 | - | - | - | - | - | - |
 | 1 | D | W | A | R | F |
@@ -23,6 +24,7 @@ Let's try the decryption method for this cipher:
 | 3 | J | O | C | K | S |
 | 4 | M | U | N | T | Z |
 | 5 | V | I | B | E | X |
+```
 
 The ciphertext is ZKSWIE, whose letters are represented by the coordinates:
 
