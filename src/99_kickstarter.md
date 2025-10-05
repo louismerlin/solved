@@ -103,8 +103,66 @@ After a few back-and-forths between key guessing and checking, we get to "Comic 
 
 ## Challenge 3
 
-Coming Soon
+### Finding the challenge
+
+Challenge 3's code can be found in the FAQ section of the kickstarter page.
+
+This is binary code, but bits are usually represented as bytes, which are 8 bit long, whereas this message has variable length words.
+
+One of the most famous codes with variable length encoding is *morse code*. After quickly checking, it seems like this is in fact the morse code representation of a URL, with ones being dashes, and zeroes being dots.
+
+You'll get the URL, which leads you to a bonus flag and the rest of the challenge.
+
+### Reversing the passphrase
+
+We are given a python program, and asked to find the passphrase that it checks for.
+
+The most important part is:
+
+```
+c = "LZC:36|B@6zD"
+c == "".join([chr(ord(i)+1) for i in p[::2]] + [chr(ord(i)-1) for i in p[::-2]])
+```
+
+Here, "p" is the passphrase given as input to the program. If the "==" check holds, then `p` is correct.
+
+Let's try to reverse-engineer the passphrase. Translated into english, the operation says:
+- For every two characters, starting with the first one, we take the next letter or symbol in the alphabet and put them next to each other
+- For every two characters, starting with the last one and going backwards, we take the previous letter or symbol in the alphabet and put them next to each other
+- We take those two strings of characters and append them to each other
+
+This means that `LZC:36` is one of every two characters from the passphrase going forward, increased by one character, and that `|B@6zD` is one of every two caracters from the passphrase going backwards, decreased by one character.
+
+In order to recover the passphrase, we need to:
+- Decrease every letter from `LZC:36` by one, giving `KYB925`
+- Increase every letter from `|B@6zD` by one and reverse it (flip it around), giving `E{7AC}`
+- Combine `KYB925` and `E{7AC}` by taking letters from each sequentially, giving us the key in the format `KEY{...}`
 
 ## Challenge 4
 
-Coming Soon
+### Finding the challenge
+
+We are given a list of numbers, ranging from 05 to 811. They don't decode to anything right out of the box, so we're probably going to have to either find the correct parsing method, or manipulate the data somehow before we can decode it.
+
+The hints that helped me with this were:
+1. some numbers are prefixed with `0`, which is quite unusual
+2. All 3-digit numbers end with `01` or `11`
+
+After a few hours afk (best technique when you're stuck!), I figured it out: I should try reversing the digits!
+
+Using [CyberChef](https://gchq.github.io/CyberChef/#recipe=Reverse('Character')From_Decimal('Space',false)&input=ODQgODQgMTExIDAxMSAwNSA4NCAyNSA3NCA4OSA4MTEgNjQgNTExIDMwMSAyMTEgMjIxIDc0IDc0IDg1IDIwMSA5OSAzMDEgMzAxIDcxMQ), we try that and get `uggcf://zpgs.vb/402no00`. This looks like a URL, but with the letters all jangled up.
+
+Using the [cipher identifier](www.dcode.fr/cipher-identifier) we can figure out it's encrypted using the [ROT13 algorithm](https://en.wikipedia.org/wiki/ROT13), also known as the Caesar cipher (with a shift of 13).
+
+Using the "ROT13" operation on CyberChef, we get our URL, and with it a bonus flag and the challenge itself.
+
+### A phishy email
+
+You are given an email to download. Running `strings email.eml | grep KEY` does not yield any result.
+Opening it with an email application, we can see it has a docm attachement. Let's download it.
+Running `strings` on it again, we do not see anything of interest.
+Let's open it with a document viewer, such as [LibreOffice Writer](https://en.wikipedia.org/wiki/LibreOffice_Writer).
+
+The form says something weird about needing to have macros enabled. Let's inspect the document's macros. In LibreOffice Writer, this is done with "Tools", "Macros", "Edit Macros".
+
+Here is the flag, hidden in a macro!
