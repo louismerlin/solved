@@ -121,7 +121,44 @@ Now find the <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Referenc
 </code></pre>
 <h2>Challenge 2</h2>
 <h3>Finding the challenge</h3>
-<p>Coming soon</p>
+<p>This looks like base64-encoded data! Using <a href="https://gchq.github.io/CyberChef/">CyberChef</a>'s &quot;From Base64&quot; operation, we get:</p>
+<pre><code>ABABB AAABA BAABA AABAB . ABAAA ABBAB / 1 AAABA 653 AABAA 1
+</code></pre>
+<p>We recognize the pattern &quot;mctf.io/something&quot; from the previous challenges.</p>
+<p>Trying to replace As by 0 and Bs by 1, and matching these binary sequences to ascii characters does not seem to work.</p>
+<p>Looking for another approach, you can try pasting these characters into <a href="https://www.dcode.fr/cipher-identifier">dcode's cipher identifier</a>, which will tell you that this is a <a href="https://www.dcode.fr/bacon-cipher">baconian cipher</a>.</p>
+<p>With this information, replacing the baconian letters in the code, we get the correct URL to get to a bonus flag, and the actual challenge.</p>
+<h3>Running around XOR</h3>
+<p>We are given three encrypted messages (ciphertexts) and are told they have been encrypted with the <a href="https://en.wikipedia.org/wiki/XOR_cipher">XOR cipher</a>, using the same key.</p>
+<p>One of the ciphertexts decrypts to the flag, in the format <code>KEY{...}</code>.</p>
+<p>According to the properties of the XOR cipher, we know that, given E1, E2 and E3 the three encrypted messages, K the encryption key and P1, P2 and P3 the three plaintext messages:</p>
+<pre><code>E1 ⊕ P1 = K
+E2 ⊕ P2 = K
+E3 ⊕ P3 = K
+
+E1 ⊕ K = P1
+E2 ⊕ K = P2
+E3 ⊕ K = P3
+</code></pre>
+<p>We know E1, E2 and E3, as well as the first four characters of one of the plaintexts (<code>KEY{</code>).</p>
+<p>This means:</p>
+<pre><code>En[0..4] ⊕ &quot;KEY{&quot; = K[0..4]
+</code></pre>
+<p>Where En is the ciphertext of the flag.</p>
+<p>Let's first compute all three potential four first letters of the key. We use <a href="https://gchq.github.io/CyberChef/#recipe=From_Hex(&#x27;Auto&#x27;)XOR(%7B&#x27;option&#x27;:&#x27;UTF8&#x27;,&#x27;string&#x27;:&#x27;KEY%7B&#x27;%7D,&#x27;Standard&#x27;,false)To_Hex(&#x27;Space&#x27;,0)&amp;input=OWQgYzIgZDMgODYK">CyberChef</a> with the &quot;From Hex&quot;, &quot;XOR&quot; and &quot;To Hex&quot; operations. to get the first potential beginning of the key.</p>
+<p>This gives us:</p>
+<pre><code>d6 87 8a fd
+de ad be ef
+d6 91 85 f1
+</code></pre>
+<p>One of these has to be the beginning of the decryption key we are looking for. Let's put them in turn in the &quot;Key&quot; input of the &quot;XOR&quot; operation, changing the key format to &quot;HEX&quot;, and disabling the &quot;To Hex&quot; operation to get characters.</p>
+<p>The second line gives us the following 4-character plaintexts:</p>
+<pre><code>Comi
+KEY{
+Cybe
+</code></pre>
+<p>These look like words! Now we need to guess the rest.
+After a few back-and-forths between key guessing and checking, we get to &quot;Comic Books&quot;, the flag and &quot;Cybersecure&quot;.</p>
 <h2>Challenge 3</h2>
 <p>Coming Soon</p>
 <h2>Challenge 4</h2>
