@@ -100,118 +100,45 @@ img {
 <body>
 <main>
 <br>
-<h1>THE FUTURE IS <span id="puzzle">******</span></h1>
-<script>
-const el = document.getElementById('puzzle');
-const target = 'SOLVED';
-let pos = 0;
-
-function flick() {
-    if (pos >= target.length) return;
-    
-    let current = el.textContent;
-    let charCode = 65;
-    
-    const interval = setInterval(() => {
-        current = current.substring(0, pos) + String.fromCharCode(charCode) + current.substring(pos + 1);
-        el.textContent = current;
-        
-        if (charCode === target.charCodeAt(pos)) {
-            clearInterval(interval);
-            pos++;
-            setTimeout(flick, 50);
-        }
-        
-        charCode = charCode === 90 ? 65 : charCode + 1;
-    }, 50);
-}
-
-setTimeout(flick, 1000);
-</script>
-<p>On this website, I'll show you how to solve challenges from <em>The Future Is ******</em> from <a href="https://www.blackhillsinfosec.com/rekcah/">REKAH Comics</a>.</p>
-<p>Here are links to other people who are doing the same thing:</p>
-<ul>
-<li><a href="https://github.com/setral/CTF_Writeups/tree/main/The%20Future%20is%20******">Setral's GitHub repo</a></li>
-<li><a href="https://www.skycritch.com/the-future-is/">Skycritch's website</a></li>
-<li><a href="https://itsjoshb.com/blog/martina-white-wolf/">joshb's blog</a></li>
-</ul>
-<br>
-<h2>01 - OGN</h2>
-<div class="row">
-<div class="column">
-<p>The OGN issue came out on May 28th 2025.</p>
-<h3><a href="./01_cover.html">Cover Challenge</a></h3>
-<h3><a href="./01_crack.html">Crack the ******</a></h3>
-<h3><a href="./01_1.html">Challenge #1</a></h3>
-<h3><a href="./01_2.html">Challenge #2</a></h3>
-<h3><a href="./01_3.html">Challenge #3</a></h3>
-<h3><a href="./01_4.html">Challenge #4</a></h3>
-<h3><a href="./01_5.html">Challenge #5</a></h3>
-<h3><a href="./01_6.html">Challenge #6</a></h3>
-<h3><a href="./01_7.html">Challenge #7</a></h3>
-<h3>Challenge #8</h3>
-<p>We're not allowed to share this one, but maybe you can find a second-hand copy of the Kickstarter edition of OGN on eBay, that's what I did.</p>
-</div>
-<div class="column img-column">
-<img alt="OGN Cover" src="./images/01.jpg">
-</div>
-</div>
-<br>
-<h2>99 - Other</h2>
-<h3><a href="./99_announcement.html">Kickstarter Announcement</a></h3>
-<h3><a href="./99_kickstarter.html">Kickstarter Challenges</a></h3>
-<h3><a href="./99_ashcan.html">Ashcan Challenge</a></h3>
-<br>
-<h2>02 - MARTINA</h2>
-<div class="row">
-<div class="column">
-<p>The MARTINA issue came out on June 11th 2025.</p>
-<h3><a href="./02_cover.html">Cover Challenge</a></h3>
-<h3><a href="./02_crack.html">Crack the ******</a></h3>
-<h3><a href="./02_1.html">Challenge #1 - White Wolf</a></h3>
-<h3><a href="./02_2.html">Challenge #2 - Penance</a></h3>
-</div>
-<div class="column img-column">
-<img alt="MARTINA Cover" src="./images/02.jpg">
-</div>
-</div>
-<br>
-<h2>03 - ELI</h2>
-<div class="row">
-<div class="column">
-<p>The ELI issue came out on July 9th 2025.</p>
-<h3><a href="./03_cover.html">Cover Challenge</a></h3>
-<h3><a href="./03_crack.html">Crack the ******</a></h3>
-<h3><a href="./03_1.html">Challenge #1 - Sneaks</a></h3>
-<h3><a href="./03_2.html">Challenge #2 - Helipad</a></h3>
-</div>
-<div class="column img-column">
-<img alt="ELI Cover" src="./images/03.jpg">
-</div>
-</div>
-<br>
-<h2>04 - SALLY</h2>
-<div class="row">
-<div class="column">
-<p>The SALLY issue came out on August 13th 2025.</p>
-<p>Waiting on the 3-month solution embargo, look back here soon.</p>
-</div>
-<div class="column img-column">
-<img alt="SALLY Cover" src="./images/04.jpg">
-</div>
-</div>
-<br>
-<h2>05 - ART/ARF</h2>
-<div class="row">
-<div class="column">
-<p>The ART/ARF issue came out on September 10th 2025.</p>
-<p>Waiting on the 3-month solution embargo, look back here soon.</p>
-</div>
-<div class="column img-column">
-<img alt="ART/ARF Cover" src="./images/05.jpg">
-</div>
-</div>
-<br>
+<p><a href="./index.html">back to home</a></p>
+<h1>ELI Crack the ******</h1>
+<p>This challenge can be found on the inside of the cover of issue 3.</p>
+<h2>The Setup</h2>
+<p>We're given four &quot;expressions&quot;:</p>
+<pre><code>^[ABC]?(N)+.*L$
+^N[A-E]{1}[A-Z]*?$
+^.[E-U]{2}[R-T]{1}..$
+^[A-Z]{2}[U-Z][RAM]A.$
+</code></pre>
+<h2>The Match</h2>
+<p>These are <a href="https://en.wikipedia.org/wiki/Regular_expression">regular expressions</a>, or &quot;regex&quot;.
+They are usually used to match patterns on text.
+The word we have to find is the only 6-letter word that matches all expressions.</p>
+<p>Here are all of symbols we need to know:</p>
+<pre><code>^     marks the beginning of a word
+$     marks the end of a word
+A     means there is a A here
+[XYZ] means that either X, Y or Z is in this spot
+[W-Z] means that one letter from W to Z is in this spot
+{5}   means there are 5 occurences of the previous item
+.     means there can be any one character in this spot 
+*     means the previous item is repeated 0 or more times
++     means the previous item is repeated one or more times
+?     means the previous item is repeated 0 or 1 time
+( )   groups things together
+</code></pre>
+<p>With this, we can guess:</p>
+<pre><code>^[ABC]?(N)+.*L$        =&gt; One or more N in the first or second spot, L at the last spot
+^N[A-E]{1}[A-Z]*?$     =&gt; N in the first spot, then A to E in the second
+^.[E-U]{2}[R-T]{1}..$  =&gt; E to U in the second and third spot, R to T in the fourth
+^[A-Z]{2}[U-Z][RAM]A.$ =&gt; U to Z in the third spot, R, A or M in the fourth, A in the fifth
+</code></pre>
+<p>Already we can lock-in <code>N***AL</code></p>
+<p>The third spot is a letter from E to U and from U to Z, so it must be U.</p>
+<p><code>N*U*AL</code></p>
+<p>The fourth spot is a letter from R to T, but also has to be R, A or M, so it has to be R.</p>
+<p><code>N*URAL</code></p>
+<p>The second spot is a letter from A to E. Trying-out the five possibilities, only one is an english word. We've got our flag!</p>
 <br>
 <br>
 <footer>

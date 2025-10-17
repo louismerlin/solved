@@ -115,7 +115,13 @@ The MARTINA issue came out on June 11th 2025.
 
 The ELI issue came out on July 9th 2025.
 
-Waiting on the 3-month solution embargo, look back here soon.
+### [Cover Challenge](./03_cover.html)
+
+### [Crack the \*\*\*\*\*\*](./03_crack.html)
+
+### [Challenge #1 - Sneaks](./03_1.html)
+
+### [Challenge #2 - Helipad](./03_2.html)
 
 </div>
 <div class="column img-column">

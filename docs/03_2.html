@@ -100,118 +100,27 @@ img {
 <body>
 <main>
 <br>
-<h1>THE FUTURE IS <span id="puzzle">******</span></h1>
-<script>
-const el = document.getElementById('puzzle');
-const target = 'SOLVED';
-let pos = 0;
-
-function flick() {
-    if (pos >= target.length) return;
-    
-    let current = el.textContent;
-    let charCode = 65;
-    
-    const interval = setInterval(() => {
-        current = current.substring(0, pos) + String.fromCharCode(charCode) + current.substring(pos + 1);
-        el.textContent = current;
-        
-        if (charCode === target.charCodeAt(pos)) {
-            clearInterval(interval);
-            pos++;
-            setTimeout(flick, 50);
-        }
-        
-        charCode = charCode === 90 ? 65 : charCode + 1;
-    }, 50);
-}
-
-setTimeout(flick, 1000);
-</script>
-<p>On this website, I'll show you how to solve challenges from <em>The Future Is ******</em> from <a href="https://www.blackhillsinfosec.com/rekcah/">REKAH Comics</a>.</p>
-<p>Here are links to other people who are doing the same thing:</p>
-<ul>
-<li><a href="https://github.com/setral/CTF_Writeups/tree/main/The%20Future%20is%20******">Setral's GitHub repo</a></li>
-<li><a href="https://www.skycritch.com/the-future-is/">Skycritch's website</a></li>
-<li><a href="https://itsjoshb.com/blog/martina-white-wolf/">joshb's blog</a></li>
-</ul>
-<br>
-<h2>01 - OGN</h2>
-<div class="row">
-<div class="column">
-<p>The OGN issue came out on May 28th 2025.</p>
-<h3><a href="./01_cover.html">Cover Challenge</a></h3>
-<h3><a href="./01_crack.html">Crack the ******</a></h3>
-<h3><a href="./01_1.html">Challenge #1</a></h3>
-<h3><a href="./01_2.html">Challenge #2</a></h3>
-<h3><a href="./01_3.html">Challenge #3</a></h3>
-<h3><a href="./01_4.html">Challenge #4</a></h3>
-<h3><a href="./01_5.html">Challenge #5</a></h3>
-<h3><a href="./01_6.html">Challenge #6</a></h3>
-<h3><a href="./01_7.html">Challenge #7</a></h3>
-<h3>Challenge #8</h3>
-<p>We're not allowed to share this one, but maybe you can find a second-hand copy of the Kickstarter edition of OGN on eBay, that's what I did.</p>
-</div>
-<div class="column img-column">
-<img alt="OGN Cover" src="./images/01.jpg">
-</div>
-</div>
-<br>
-<h2>99 - Other</h2>
-<h3><a href="./99_announcement.html">Kickstarter Announcement</a></h3>
-<h3><a href="./99_kickstarter.html">Kickstarter Challenges</a></h3>
-<h3><a href="./99_ashcan.html">Ashcan Challenge</a></h3>
-<br>
-<h2>02 - MARTINA</h2>
-<div class="row">
-<div class="column">
-<p>The MARTINA issue came out on June 11th 2025.</p>
-<h3><a href="./02_cover.html">Cover Challenge</a></h3>
-<h3><a href="./02_crack.html">Crack the ******</a></h3>
-<h3><a href="./02_1.html">Challenge #1 - White Wolf</a></h3>
-<h3><a href="./02_2.html">Challenge #2 - Penance</a></h3>
-</div>
-<div class="column img-column">
-<img alt="MARTINA Cover" src="./images/02.jpg">
-</div>
-</div>
-<br>
-<h2>03 - ELI</h2>
-<div class="row">
-<div class="column">
-<p>The ELI issue came out on July 9th 2025.</p>
-<h3><a href="./03_cover.html">Cover Challenge</a></h3>
-<h3><a href="./03_crack.html">Crack the ******</a></h3>
-<h3><a href="./03_1.html">Challenge #1 - Sneaks</a></h3>
-<h3><a href="./03_2.html">Challenge #2 - Helipad</a></h3>
-</div>
-<div class="column img-column">
-<img alt="ELI Cover" src="./images/03.jpg">
-</div>
-</div>
-<br>
-<h2>04 - SALLY</h2>
-<div class="row">
-<div class="column">
-<p>The SALLY issue came out on August 13th 2025.</p>
-<p>Waiting on the 3-month solution embargo, look back here soon.</p>
-</div>
-<div class="column img-column">
-<img alt="SALLY Cover" src="./images/04.jpg">
-</div>
-</div>
-<br>
-<h2>05 - ART/ARF</h2>
-<div class="row">
-<div class="column">
-<p>The ART/ARF issue came out on September 10th 2025.</p>
-<p>Waiting on the 3-month solution embargo, look back here soon.</p>
-</div>
-<div class="column img-column">
-<img alt="ART/ARF Cover" src="./images/05.jpg">
-</div>
-</div>
-<br>
+<p><a href="./index.html">back to home</a></p>
+<h1>ELI Challenge #2 - Helipad</h1>
+<p>This challenge can be found when Martina jumps off a helipad.</p>
+<h2>The Setup</h2>
+<blockquote>
+<p>Looks like after freebooting the queue, Martina and Wheeler hid something on the Space Charging Queue panel.</p>
+<p>Can you find it yourself?</p>
+</blockquote>
+<p>We're given a link to a web dashboard.</p>
+<h2>The Dashboard</h2>
+<p>Taking a look at the HTML source, this looks like a React app. This means we have to go digging into the JavaScript of the page.</p>
+<p>You should have access to <a href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools">devtools</a> in your browser of choice.
+Using the &quot;Debugger&quot; tab, we can inspect the source code. Both <code>static/js/App.js</code> and <code>static/js/index.js</code> do not contain anything out of the ordinary, but <code>static/js/components/ctfpage.jsx</code> has some code that clearly references the challenge.</p>
+<pre><code>useEffect(() =&gt; {
+  window.getFlag = () =&gt; flag;
+}, [flag]);
+</code></pre>
+<p>This is a fancy JavaScript way of saying &quot;the <code>getFlag()</code> function returns the flag&quot;.</p>
+<p>Opening up the &quot;Console&quot;, we type <code>getFlag()</code>, press enter, and the flag is right there!</p>
+<h2>The Search</h2>
+<p>Alternatively, you could have gone to the &quot;Network&quot; tab, clicked on <code>main.something.js</code>, &quot;Response&quot;, ctrl+F and search for &quot;KEY{&quot; to get the flag.</p>
 <br>
 <br>
 <footer>

@@ -100,118 +100,82 @@ img {
 <body>
 <main>
 <br>
-<h1>THE FUTURE IS <span id="puzzle">******</span></h1>
-<script>
-const el = document.getElementById('puzzle');
-const target = 'SOLVED';
-let pos = 0;
-
-function flick() {
-    if (pos >= target.length) return;
-    
-    let current = el.textContent;
-    let charCode = 65;
-    
-    const interval = setInterval(() => {
-        current = current.substring(0, pos) + String.fromCharCode(charCode) + current.substring(pos + 1);
-        el.textContent = current;
-        
-        if (charCode === target.charCodeAt(pos)) {
-            clearInterval(interval);
-            pos++;
-            setTimeout(flick, 50);
-        }
-        
-        charCode = charCode === 90 ? 65 : charCode + 1;
-    }, 50);
-}
-
-setTimeout(flick, 1000);
-</script>
-<p>On this website, I'll show you how to solve challenges from <em>The Future Is ******</em> from <a href="https://www.blackhillsinfosec.com/rekcah/">REKAH Comics</a>.</p>
-<p>Here are links to other people who are doing the same thing:</p>
-<ul>
-<li><a href="https://github.com/setral/CTF_Writeups/tree/main/The%20Future%20is%20******">Setral's GitHub repo</a></li>
-<li><a href="https://www.skycritch.com/the-future-is/">Skycritch's website</a></li>
-<li><a href="https://itsjoshb.com/blog/martina-white-wolf/">joshb's blog</a></li>
-</ul>
-<br>
-<h2>01 - OGN</h2>
-<div class="row">
-<div class="column">
-<p>The OGN issue came out on May 28th 2025.</p>
-<h3><a href="./01_cover.html">Cover Challenge</a></h3>
-<h3><a href="./01_crack.html">Crack the ******</a></h3>
-<h3><a href="./01_1.html">Challenge #1</a></h3>
-<h3><a href="./01_2.html">Challenge #2</a></h3>
-<h3><a href="./01_3.html">Challenge #3</a></h3>
-<h3><a href="./01_4.html">Challenge #4</a></h3>
-<h3><a href="./01_5.html">Challenge #5</a></h3>
-<h3><a href="./01_6.html">Challenge #6</a></h3>
-<h3><a href="./01_7.html">Challenge #7</a></h3>
-<h3>Challenge #8</h3>
-<p>We're not allowed to share this one, but maybe you can find a second-hand copy of the Kickstarter edition of OGN on eBay, that's what I did.</p>
-</div>
-<div class="column img-column">
-<img alt="OGN Cover" src="./images/01.jpg">
-</div>
-</div>
-<br>
-<h2>99 - Other</h2>
-<h3><a href="./99_announcement.html">Kickstarter Announcement</a></h3>
-<h3><a href="./99_kickstarter.html">Kickstarter Challenges</a></h3>
-<h3><a href="./99_ashcan.html">Ashcan Challenge</a></h3>
-<br>
-<h2>02 - MARTINA</h2>
-<div class="row">
-<div class="column">
-<p>The MARTINA issue came out on June 11th 2025.</p>
-<h3><a href="./02_cover.html">Cover Challenge</a></h3>
-<h3><a href="./02_crack.html">Crack the ******</a></h3>
-<h3><a href="./02_1.html">Challenge #1 - White Wolf</a></h3>
-<h3><a href="./02_2.html">Challenge #2 - Penance</a></h3>
-</div>
-<div class="column img-column">
-<img alt="MARTINA Cover" src="./images/02.jpg">
-</div>
-</div>
-<br>
-<h2>03 - ELI</h2>
-<div class="row">
-<div class="column">
-<p>The ELI issue came out on July 9th 2025.</p>
-<h3><a href="./03_cover.html">Cover Challenge</a></h3>
-<h3><a href="./03_crack.html">Crack the ******</a></h3>
-<h3><a href="./03_1.html">Challenge #1 - Sneaks</a></h3>
-<h3><a href="./03_2.html">Challenge #2 - Helipad</a></h3>
-</div>
-<div class="column img-column">
-<img alt="ELI Cover" src="./images/03.jpg">
-</div>
-</div>
-<br>
-<h2>04 - SALLY</h2>
-<div class="row">
-<div class="column">
-<p>The SALLY issue came out on August 13th 2025.</p>
-<p>Waiting on the 3-month solution embargo, look back here soon.</p>
-</div>
-<div class="column img-column">
-<img alt="SALLY Cover" src="./images/04.jpg">
-</div>
-</div>
-<br>
-<h2>05 - ART/ARF</h2>
-<div class="row">
-<div class="column">
-<p>The ART/ARF issue came out on September 10th 2025.</p>
-<p>Waiting on the 3-month solution embargo, look back here soon.</p>
-</div>
-<div class="column img-column">
-<img alt="ART/ARF Cover" src="./images/05.jpg">
-</div>
-</div>
-<br>
+<p><a href="./index.html">back to home</a></p>
+<h1>ELI Challenge #1 - Sneaks</h1>
+<p>This challenge can be found when Eli takes care of sneaky-sneaks trying to breach into Säkerhetsbubbla.</p>
+<h2>The Setup</h2>
+<blockquote>
+<p>There's some service running on a port it wasn't originally meant to run on, on this host...</p>
+<p>Help Eli find the service that doesn't follow the rules and it'll give you the flag. The flag will be in format KEY{...}</p>
+<p>(no need to scan all ports, just the first 100 + hint: it's running as the anonymous user)</p>
+</blockquote>
+<h2>The Ports</h2>
+<p>First, we need to figure out the IP address we'll have to scan. Using a CLI utility such as <code>dig</code> or <code>ping</code> will help. Remember you should only give these tools the <strong>domain name</strong>, without the path.</p>
+<p>I've replaced the IP address with X.XX.XX.XXX for the rest of this article, in case it changes in the future.</p>
+<p>Now, we can use <code>nmap</code> to scan the first 100 ports and see what is open.</p>
+<pre><code>$ nmap -p 1-100 X.XX.XX.XXX
+...
+80/tcp open  http
+99/tcp open  metagram
+</code></pre>
+<p>The HTTP server on port 80 is the one we'd expect for a website, so the flag must be somewhere behind port 99. <code>metagram</code> doesn't ring a bell, but let's just cURL what's there.</p>
+<pre><code>$ curl X.XX.XX.XXX:99
+curl: (1) Received HTTP/0.9 when not allowed
+</code></pre>
+<p>No luck. Second thing to try after cURL is always ncat:</p>
+<pre><code>$ ncat X.XX.XX.XXX 99
+220-⠀⠀⠀⠀⠀⠀⢀⣀⣀⣀⣤⣤⣤⣤⣤⣤⣤⣤⣤⣤⣤⣤⣤⣀⣀⠀⠀⠀⠀⠀
+220-⠀⠀⠀⠀⠀⠀⣾⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⠀⠀⠀⠀⢀⠀⠈⡇⠀⠀⠀⠀
+220-⠀⠀⠀⠀⠀⠀⣿⠀⠁⠀⠘⠁⠀⠀⠀⠀⠀⣀⡀⠀⠀⠀⠈⠀⠀⡇⠀⠀⠀⠀
+220-⣀⣀⣀⠀⠀⠀⣿⠀⠀⠀⠀⠀⠄⠀⠀⠸⢰⡏⠉⠳⣄⠰⠀⠀⢰⣷⠶⠛⣧⠀
+220-⢻⡀⠈⠙⠲⡄⣿⠀⠀⠀⠀⠀⠀⠀⠠⠀⢸⠀⠀⠀⠈⠓⠒⠒⠛⠁⠀⠀⣿⠀
+220-⠀⠻⣄⠀⠀⠙⣿⠀⠀⠀⠈⠁⠀⢠⠄⣰⠟⠀⢀⡔⢠⠀⠀⠀⠀⣠⠠⡄⠘⢧
+220-⠀⠀⠈⠛⢦⣀⣿⠀⠀⢠⡆⠀⠀⠈⠀⣯⠀⠀⠈⠛⠛⠀⠠⢦⠄⠙⠛⠃⠀⢸
+220-⠀⠀⠀⠀⠀⠉⣿⠀⠀⠀⢠⠀⠀⢠⠀⠹⣆⠀⠀⠀⠢⢤⠠⠞⠤⡠⠄⠀⢀⡾
+220-⠀⠀⠀⠀⠀⢀⡿⠦⢤⣤⣤⣤⣤⣤⣤⣤⡼⣷⠶⠤⢤⣤⣤⡤⢤⡤⠶⠖⠋⠀
+220-⠀⠀⠀⠀⠀⠸⣤⡴⠋⠸⣇⣠⠼⠁⠀⠀⠀⠹⣄⣠⠞⠀⢾⡀⣠⠃⠀⠀⠀⠀
+220-⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠁⠀⠀⠀⠀⠀
+220- Welcome to Säkerhetsbubbla ftp
+220 
+</code></pre>
+<p>Awesome! Let's ftp into that server then.</p>
+<h2>The Cat</h2>
+<p>After a bit of trial and error, I figured out you needed the <code>-p</code> &quot;passive&quot; flag in order for everything to work properly.</p>
+<pre><code>$ ftp -p X.XX.XX.XXX 99
+Connected to X.XX.XX.XXX.
+220-⠀⠀⠀⠀⠀⠀⢀⣀⣀⣀⣤⣤⣤⣤⣤⣤⣤⣤⣤⣤⣤⣤⣤⣀⣀⠀⠀⠀⠀⠀
+220-⠀⠀⠀⠀⠀⠀⣾⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⠀⠀⠀⠀⢀⠀⠈⡇⠀⠀⠀⠀
+220-⠀⠀⠀⠀⠀⠀⣿⠀⠁⠀⠘⠁⠀⠀⠀⠀⠀⣀⡀⠀⠀⠀⠈⠀⠀⡇⠀⠀⠀⠀
+220-⣀⣀⣀⠀⠀⠀⣿⠀⠀⠀⠀⠀⠄⠀⠀⠸⢰⡏⠉⠳⣄⠰⠀⠀⢰⣷⠶⠛⣧⠀
+220-⢻⡀⠈⠙⠲⡄⣿⠀⠀⠀⠀⠀⠀⠀⠠⠀⢸⠀⠀⠀⠈⠓⠒⠒⠛⠁⠀⠀⣿⠀
+220-⠀⠻⣄⠀⠀⠙⣿⠀⠀⠀⠈⠁⠀⢠⠄⣰⠟⠀⢀⡔⢠⠀⠀⠀⠀⣠⠠⡄⠘⢧
+220-⠀⠀⠈⠛⢦⣀⣿⠀⠀⢠⡆⠀⠀⠈⠀⣯⠀⠀⠈⠛⠛⠀⠠⢦⠄⠙⠛⠃⠀⢸
+220-⠀⠀⠀⠀⠀⠉⣿⠀⠀⠀⢠⠀⠀⢠⠀⠹⣆⠀⠀⠀⠢⢤⠠⠞⠤⡠⠄⠀⢀⡾
+220-⠀⠀⠀⠀⠀⢀⡿⠦⢤⣤⣤⣤⣤⣤⣤⣤⡼⣷⠶⠤⢤⣤⣤⡤⢤⡤⠶⠖⠋⠀
+220-⠀⠀⠀⠀⠀⠸⣤⡴⠋⠸⣇⣠⠼⠁⠀⠀⠀⠹⣄⣠⠞⠀⢾⡀⣠⠃⠀⠀⠀⠀
+220-⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠁⠀⠀⠀⠀⠀
+220- Welcome to Säkerhetsbubbla ftp
+220 
+Name (X.XX.XX.XXX:louis): anonymous
+230 Login successful.
+Remote system type is UNIX.
+Using binary mode to transfer files.
+ftp&gt; ls
+227 Entering Passive Mode (X,XX,XX,XXX,255,62).
+150 Here comes the directory listing.
+-rw-rw-r--    1 0        0              13 May 21 16:23 flag.txt
+226 Directory send OK.
+ftp&gt; cat flag.txt
+?Invalid command
+ftp&gt; get flag.txt
+227 Entering Passive Mode (X,XX,XX,XXX,254,44).
+150 Opening BINARY mode data connection for flag.txt (13 bytes).
+226 Transfer complete.
+13 bytes received in 0.0002 seconds (60.1879 kbytes/s)
+ftp&gt; 
+221 Goodbye.
+</code></pre>
+<p>After logging in with the &quot;anonymous&quot; username, we can <code>get flag.txt</code> and download our prize!</p>
 <br>
 <br>
 <footer>
