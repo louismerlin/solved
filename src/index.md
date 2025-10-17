@@ -43,7 +43,7 @@ Here are links to other people who are doing the same thing:
 <div class="row">
 <div class="column">
 
-The OGN issue came out on May 28th 2025.
+The OGN issue came out in May 2025.
 
 ### [Cover Challenge](./01_cover.html)
 
@@ -90,7 +90,7 @@ We're not allowed to share this one, but maybe you can find a second-hand copy o
 <div class="row">
 <div class="column">
 
-The MARTINA issue came out on June 11th 2025.
+The MARTINA issue came out in June 2025.
 
 ### [Cover Challenge](./02_cover.html)
 
@@ -113,7 +113,7 @@ The MARTINA issue came out on June 11th 2025.
 <div class="row">
 <div class="column">
 
-The ELI issue came out on July 9th 2025.
+The ELI issue came out in July 2025.
 
 ### [Cover Challenge](./03_cover.html)
 
@@ -136,7 +136,7 @@ The ELI issue came out on July 9th 2025.
 <div class="row">
 <div class="column">
 
-The SALLY issue came out on August 13th 2025.
+The SALLY issue came out in August 2025.
 
 Waiting on the 3-month solution embargo, look back here soon.
 
@@ -153,13 +153,60 @@ Waiting on the 3-month solution embargo, look back here soon.
 <div class="row">
 <div class="column">
 
-The ART/ARF issue came out on September 10th 2025.
+The ART/ARF issue came out in September 2025.
 
 Waiting on the 3-month solution embargo, look back here soon.
 
 </div>
 <div class="column img-column">
 <img alt="ART/ARF Cover" src="./images/05.jpg">
+</div>
+</div>
+
+<br>
+
+## 06 - WHEELER, pt. 1
+
+<div class="row">
+<div class="column">
+
+The WHEELER, pt. 1 issue came out in October 2025.
+
+Waiting on the 3-month solution embargo, look back here soon.
+
+</div>
+<div class="column img-column">
+<img alt="WHEELER, pt. 1 Cover" src="./images/06.jpg">
+</div>
+</div>
+
+<br>
+
+## 07 - WHEELER, pt. 2
+
+<div class="row">
+<div class="column">
+
+The WHEELER, pt. 2 issue will come out in November 2025.
+
+</div>
+<div class="column img-column">
+<img alt="WHEELER, pt. 2 Cover" src="./images/07.jpg">
+</div>
+</div>
+
+<br>
+
+## 08 - TBD
+
+<div class="row">
+<div class="column">
+
+The 8th issue will come out in December 2025.
+
+</div>
+<div class="column img-column">
+<img alt="08 (TBD) Cover" src="./images/08.jpg">
 </div>
 </div>
 
