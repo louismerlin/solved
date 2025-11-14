@@ -6,9 +6,9 @@ This challenge can be found on the cover of issue 2. Spot the long string of cha
 
 ## The Address?
 
-This long string of hexadecimal characters punctudated by `:` colons looks like an IPv6 address.
+This long string of hexadecimal characters punctuated by `:` colons looks like an IPv6 address.
 
-Hovever, trying to get the content at this address does not return anything.
+However, trying to get the content at this address does not return anything.
 
 ```bash
 $ curl -6 http://[the_address_on_the_cover]

@@ -12,11 +12,11 @@ This challenge can be found on the cover of issue 3. Spot the numbers under the 
 
 ## The Numbers
 
-First thing I tried when seeing these digits is open-up [CyberChef](https://gchq.github.io/CyberChef/), and try to decode the message with the "From Decimal" operation.
+First thing I tried when seeing these digits was to open-up [CyberChef](https://gchq.github.io/CyberChef/), and try to decode the message with the "From Decimal" operation.
 
-Doesn't work.
+It didn't work.
 
-At second glance, notice how the first row is mostly 1's, and the third row has spaces in-between.
+At second glance, notice how the first row is mostly 1's, and the third row has spaces in between.
 Taking a closer look, we can see that the numbers might be arranged vertically, column by column.
 The first value would be 116, then 102, etc.
 

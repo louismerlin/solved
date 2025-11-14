@@ -21,7 +21,7 @@ These are [regular expressions](https://en.wikipedia.org/wiki/Regular_expression
 They are usually used to match patterns on text.
 The word we have to find is the only 6-letter word that matches all expressions.
 
-Here are all of symbols we need to know:
+Here are all of the symbols we need to know:
 
 ```
 ^     marks the beginning of a word
@@ -29,7 +29,7 @@ $     marks the end of a word
 A     means there is a A here
 [XYZ] means that either X, Y or Z is in this spot
 [W-Z] means that one letter from W to Z is in this spot
-{5}   means there are 5 occurences of the previous item
+{5}   means there are 5 occurrences of the previous item
 .     means there can be any one character in this spot 
 *     means the previous item is repeated 0 or more times
 +     means the previous item is repeated one or more times
@@ -56,4 +56,4 @@ The fourth spot is a letter from R to T, but also has to be R, A or M, so it has
 
 `N*URAL`
 
-The second spot is a letter from A to E. Trying-out the five possibilities, only one is an english word. We've got our flag!
+The second spot is a letter from A to E. Trying-out the five possibilities, only one is an English word. We've got our flag!

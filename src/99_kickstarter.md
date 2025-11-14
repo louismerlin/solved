@@ -2,7 +2,7 @@
 
 # Kickstarter Challenges
 
-You'll find these challenges dispersed in the [kickstarter page](https://www.kickstarter.com/projects/rekcah/the-future-is-from-rekcah-comics) for the original crowdfunding campaign of the comic book series.
+You'll find these challenges dispersed in the [Kickstarter page](https://www.kickstarter.com/projects/rekcah/the-future-is-from-rekcah-comics) for the original crowdfunding campaign of the comic book series.
 
 You'll find challenges 1, 2 and 4 in the "Campaign" page and challenge 3 in the "FAQ" page.
 
@@ -26,7 +26,7 @@ Now find the ["User-Agent"](https://developer.mozilla.org/en-US/docs/Web/HTTP/Re
 
 You should now see a new request in the list. Select it, and view the "Response" to get the flag.
 
-As an alternative to all of this, you can open-up your terminal and run the command:
+As an alternative to all of this, you can open up your terminal and run the command:
 
 ```bash
 curl -A "Chrome/476" https://challenge_url
@@ -44,7 +44,7 @@ ABABB AAABA BAABA AABAB . ABAAA ABBAB / 1 AAABA 653 AABAA 1
 
 We recognize the pattern "mctf.io/something" from the previous challenges.
 
-Trying to replace As by 0 and Bs by 1, and matching these binary sequences to ascii characters does not seem to work.
+Trying to replace As by 0 and Bs by 1, and matching these binary sequences to ASCII characters does not seem to work.
 
 Looking for another approach, you can try pasting these characters into [dcode's cipher identifier](https://www.dcode.fr/cipher-identifier), which will tell you that this is a [baconian cipher](https://www.dcode.fr/bacon-cipher).
 
@@ -78,7 +78,7 @@ En[0..4] ⊕ "KEY{" = K[0..4]
 
 Where En is the ciphertext of the flag.
 
-Let's first compute all three potential four first letters of the key. We use [CyberChef](https://gchq.github.io/CyberChef/#recipe=From_Hex('Auto')XOR(%7B'option':'UTF8','string':'KEY%7B'%7D,'Standard',false)To_Hex('Space',0)&input=OWQgYzIgZDMgODYK) with the "From Hex", "XOR" and "To Hex" operations. to get the first potential beginning of the key.
+Let's first compute all three potential four first letters of the key. We use [CyberChef](https://gchq.github.io/CyberChef/#recipe=From_Hex('Auto')XOR(%7B'option':'UTF8','string':'KEY%7B'%7D,'Standard',false)To_Hex('Space',0)&input=OWQgYzIgZDMgODYK) with the "From Hex", "XOR" and "To Hex" operations to get the first potential beginning of the key.
 
 This gives us:
 
@@ -105,17 +105,17 @@ After a few back-and-forths between key guessing and checking, we get to "Comic 
 
 ### Finding the challenge
 
-Challenge 3's code can be found in the FAQ section of the kickstarter page.
+Challenge 3's code can be found in the FAQ section of the Kickstarter page.
 
-This is binary code, but bits are usually represented as bytes, which are 8 bit long, whereas this message has variable length words.
+This is binary code, but bits are usually represented as bytes, which are 8 bits long, whereas this message has variable length words.
 
-One of the most famous codes with variable length encoding is *morse code*. After quickly checking, it seems like this is in fact the morse code representation of a URL, with ones being dashes, and zeroes being dots.
+One of the most famous codes with variable length encoding is *Morse code*. After quickly checking, it seems like this is in fact the Morse code representation of a URL, with ones being dashes, and zeroes being dots.
 
 You'll get the URL, which leads you to a bonus flag and the rest of the challenge.
 
 ### Reversing the passphrase
 
-We are given a python program, and asked to find the passphrase that it checks for.
+We are given a Python program, and asked to find the passphrase that it checks for.
 
 The most important part is:
 
@@ -131,7 +131,7 @@ Let's try to reverse-engineer the passphrase. Translated into english, the opera
 - For every two characters, starting with the last one and going backwards, we take the previous letter or symbol in the alphabet and put them next to each other
 - We take those two strings of characters and append them to each other
 
-This means that `LZC:36` is one of every two characters from the passphrase going forward, increased by one character, and that `|B@6zD` is one of every two caracters from the passphrase going backwards, decreased by one character.
+This means that `LZC:36` is one of every two characters from the passphrase going forward, increased by one character, and that `|B@6zD` is one of every two characters from the passphrase going backwards, decreased by one character.
 
 In order to recover the passphrase, we need to:
 - Decrease every letter from `LZC:36` by one, giving `KYB925`
@@ -152,14 +152,14 @@ After a few hours afk (best technique when you're stuck!), I figured it out: I s
 
 Using [CyberChef](https://gchq.github.io/CyberChef/#recipe=Reverse('Character')From_Decimal('Space',false)&input=ODQgODQgMTExIDAxMSAwNSA4NCAyNSA3NCA4OSA4MTEgNjQgNTExIDMwMSAyMTEgMjIxIDc0IDc0IDg1IDIwMSA5OSAzMDEgMzAxIDcxMQ), we try that and get `uggcf://zpgs.vb/402no00`. This looks like a URL, but with the letters all jangled up.
 
-Using the [cipher identifier](www.dcode.fr/cipher-identifier) we can figure out it's encrypted using the [ROT13 algorithm](https://en.wikipedia.org/wiki/ROT13), also known as the Caesar cipher (with a shift of 13).
+Using the [cipher identifier](https://www.dcode.fr/cipher-identifier) we can figure out it's encrypted using the [ROT13 algorithm](https://en.wikipedia.org/wiki/ROT13), also known as the Caesar cipher (with a shift of 13).
 
 Using the "ROT13" operation on CyberChef, we get our URL, and with it a bonus flag and the challenge itself.
 
 ### A phishy email
 
 You are given an email to download. Running `strings email.eml | grep KEY` does not yield any result.
-Opening it with an email application, we can see it has a docm attachement. Let's download it.
+Opening it with an email application, we can see it has a docm attachment. Let's download it.
 Running `strings` on it again, we do not see anything of interest.
 Let's open it with a document viewer, such as [LibreOffice Writer](https://en.wikipedia.org/wiki/LibreOffice_Writer).
 

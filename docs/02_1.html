@@ -127,7 +127,7 @@ We need to find the address of <code>backdoor</code> and put it in the correct p
 </code></pre>
 <p>The <code>command</code> buffer is 64 bytes, but there's usually some extra padding between our buffer and the return address. On 32-bit systems, the saved EBP takes up 4 bytes right before the return address.</p>
 <p>I tested different padding lengths until I found that 76 bytes gets us to overwrite the return address.</p>
-<p>Let's put it all together in a python script, <code>exploit.py</code>, using <a href="https://docs.pwntools.com/en/stable/">pwntools</a>:</p>
+<p>Let's put it all together in a Python script, <code>exploit.py</code>, using <a href="https://docs.pwntools.com/en/stable/">pwntools</a>:</p>
 <pre><code class="language-python">from pwn import *
 
 conn = remote('localhost', 5000) 

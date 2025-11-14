@@ -2,7 +2,7 @@
 
 # Ashcan Challenge
 
-You can find the ashcan comic [here](https://www.blackhillsinfosec.com/rekcah/the-future-is-ashcan/) on bhis' website.
+You can find the ashcan comic [here](https://www.blackhillsinfosec.com/rekcah/the-future-is-ashcan/) on BHIS' website.
 
 On the second page you'll find six clocks, as well as 24 of the letters of the alphabet in a random order.
 

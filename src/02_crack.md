@@ -10,7 +10,7 @@ We are given a 6-letter cipher to crack, and a phrase made up of five 5-letter w
 
 ## The Square
 
-The page given in the cover gives us a hint: it mentions the [Polybus square](https://en.wikipedia.org/wiki/Polybius_square).
+The page given in the cover gives us a hint: it mentions the [Polybius square](https://en.wikipedia.org/wiki/Polybius_square).
 
 This page leads us to discover the [Bifid cipher](https://en.wikipedia.org/wiki/Bifid_cipher).
 

@@ -2,7 +2,7 @@
 
 # OGN Crack the \*\*\*\*\*\*
 
-This challenge can be found either in the inside of the cover of **some versions** of issue 1, or in the solution URL of the [cover challenge](./01_cover.html).
+This challenge can be found either on the inside of the cover of **some versions** of issue 1, or in the solution URL of the [cover challenge](./01_cover.html).
 
 ## The Setup
 

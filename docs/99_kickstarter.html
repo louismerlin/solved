@@ -98,7 +98,7 @@ img {
 <br>
 <p><a href="./index.html">back to home</a></p>
 <h1>Kickstarter Challenges</h1>
-<p>You'll find these challenges dispersed in the <a href="https://www.kickstarter.com/projects/rekcah/the-future-is-from-rekcah-comics">kickstarter page</a> for the original crowdfunding campaign of the comic book series.</p>
+<p>You'll find these challenges dispersed in the <a href="https://www.kickstarter.com/projects/rekcah/the-future-is-from-rekcah-comics">Kickstarter page</a> for the original crowdfunding campaign of the comic book series.</p>
 <p>You'll find challenges 1, 2 and 4 in the &quot;Campaign&quot; page and challenge 3 in the &quot;FAQ&quot; page.</p>
 <h2>Challenge 1</h2>
 <h3>Finding the challenge</h3>
@@ -112,7 +112,7 @@ Instead of waiting decades for this version to be released, let's trick the serv
 <p>Find the main html request (it should be the first one on the list when ordered chronologically), left-click and select &quot;Edit and Resend&quot;.
 Now find the <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/User-Agent">&quot;User-Agent&quot;</a> field. Replace the value to &quot;Chrome/476&quot; and click &quot;Send&quot;.</p>
 <p>You should now see a new request in the list. Select it, and view the &quot;Response&quot; to get the flag.</p>
-<p>As an alternative to all of this, you can open-up your terminal and run the command:</p>
+<p>As an alternative to all of this, you can open up your terminal and run the command:</p>
 <pre><code class="language-bash">curl -A &quot;Chrome/476&quot; https://challenge_url
 </code></pre>
 <h2>Challenge 2</h2>
@@ -121,7 +121,7 @@ Now find the <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Referenc
 <pre><code>ABABB AAABA BAABA AABAB . ABAAA ABBAB / 1 AAABA 653 AABAA 1
 </code></pre>
 <p>We recognize the pattern &quot;mctf.io/something&quot; from the previous challenges.</p>
-<p>Trying to replace As by 0 and Bs by 1, and matching these binary sequences to ascii characters does not seem to work.</p>
+<p>Trying to replace As by 0 and Bs by 1, and matching these binary sequences to ASCII characters does not seem to work.</p>
 <p>Looking for another approach, you can try pasting these characters into <a href="https://www.dcode.fr/cipher-identifier">dcode's cipher identifier</a>, which will tell you that this is a <a href="https://www.dcode.fr/bacon-cipher">baconian cipher</a>.</p>
 <p>With this information, replacing the baconian letters in the code, we get the correct URL to get to a bonus flag, and the actual challenge.</p>
 <h3>Running around XOR</h3>
@@ -141,7 +141,7 @@ E3 ⊕ K = P3
 <pre><code>En[0..4] ⊕ &quot;KEY{&quot; = K[0..4]
 </code></pre>
 <p>Where En is the ciphertext of the flag.</p>
-<p>Let's first compute all three potential four first letters of the key. We use <a href="https://gchq.github.io/CyberChef/#recipe=From_Hex(&#x27;Auto&#x27;)XOR(%7B&#x27;option&#x27;:&#x27;UTF8&#x27;,&#x27;string&#x27;:&#x27;KEY%7B&#x27;%7D,&#x27;Standard&#x27;,false)To_Hex(&#x27;Space&#x27;,0)&amp;input=OWQgYzIgZDMgODYK">CyberChef</a> with the &quot;From Hex&quot;, &quot;XOR&quot; and &quot;To Hex&quot; operations. to get the first potential beginning of the key.</p>
+<p>Let's first compute all three potential four first letters of the key. We use <a href="https://gchq.github.io/CyberChef/#recipe=From_Hex(&#x27;Auto&#x27;)XOR(%7B&#x27;option&#x27;:&#x27;UTF8&#x27;,&#x27;string&#x27;:&#x27;KEY%7B&#x27;%7D,&#x27;Standard&#x27;,false)To_Hex(&#x27;Space&#x27;,0)&amp;input=OWQgYzIgZDMgODYK">CyberChef</a> with the &quot;From Hex&quot;, &quot;XOR&quot; and &quot;To Hex&quot; operations to get the first potential beginning of the key.</p>
 <p>This gives us:</p>
 <pre><code>d6 87 8a fd
 de ad be ef
@@ -157,12 +157,12 @@ Cybe
 After a few back-and-forths between key guessing and checking, we get to &quot;Comic Books&quot;, the flag and &quot;Cybersecure&quot;.</p>
 <h2>Challenge 3</h2>
 <h3>Finding the challenge</h3>
-<p>Challenge 3's code can be found in the FAQ section of the kickstarter page.</p>
-<p>This is binary code, but bits are usually represented as bytes, which are 8 bit long, whereas this message has variable length words.</p>
-<p>One of the most famous codes with variable length encoding is <em>morse code</em>. After quickly checking, it seems like this is in fact the morse code representation of a URL, with ones being dashes, and zeroes being dots.</p>
+<p>Challenge 3's code can be found in the FAQ section of the Kickstarter page.</p>
+<p>This is binary code, but bits are usually represented as bytes, which are 8 bits long, whereas this message has variable length words.</p>
+<p>One of the most famous codes with variable length encoding is <em>Morse code</em>. After quickly checking, it seems like this is in fact the Morse code representation of a URL, with ones being dashes, and zeroes being dots.</p>
 <p>You'll get the URL, which leads you to a bonus flag and the rest of the challenge.</p>
 <h3>Reversing the passphrase</h3>
-<p>We are given a python program, and asked to find the passphrase that it checks for.</p>
+<p>We are given a Python program, and asked to find the passphrase that it checks for.</p>
 <p>The most important part is:</p>
 <pre><code>c = &quot;LZC:36|B@6zD&quot;
 c == &quot;&quot;.join([chr(ord(i)+1) for i in p[::2]] + [chr(ord(i)-1) for i in p[::-2]])
@@ -174,7 +174,7 @@ c == &quot;&quot;.join([chr(ord(i)+1) for i in p[::2]] + [chr(ord(i)-1) for i in
 <li>For every two characters, starting with the last one and going backwards, we take the previous letter or symbol in the alphabet and put them next to each other</li>
 <li>We take those two strings of characters and append them to each other</li>
 </ul>
-<p>This means that <code>LZC:36</code> is one of every two characters from the passphrase going forward, increased by one character, and that <code>|B@6zD</code> is one of every two caracters from the passphrase going backwards, decreased by one character.</p>
+<p>This means that <code>LZC:36</code> is one of every two characters from the passphrase going forward, increased by one character, and that <code>|B@6zD</code> is one of every two characters from the passphrase going backwards, decreased by one character.</p>
 <p>In order to recover the passphrase, we need to:</p>
 <ul>
 <li>Decrease every letter from <code>LZC:36</code> by one, giving <code>KYB925</code></li>
@@ -191,11 +191,11 @@ c == &quot;&quot;.join([chr(ord(i)+1) for i in p[::2]] + [chr(ord(i)-1) for i in
 </ol>
 <p>After a few hours afk (best technique when you're stuck!), I figured it out: I should try reversing the digits!</p>
 <p>Using <a href="https://gchq.github.io/CyberChef/#recipe=Reverse(&#x27;Character&#x27;)From_Decimal(&#x27;Space&#x27;,false)&amp;input=ODQgODQgMTExIDAxMSAwNSA4NCAyNSA3NCA4OSA4MTEgNjQgNTExIDMwMSAyMTEgMjIxIDc0IDc0IDg1IDIwMSA5OSAzMDEgMzAxIDcxMQ">CyberChef</a>, we try that and get <code>uggcf://zpgs.vb/402no00</code>. This looks like a URL, but with the letters all jangled up.</p>
-<p>Using the <a href="www.dcode.fr/cipher-identifier">cipher identifier</a> we can figure out it's encrypted using the <a href="https://en.wikipedia.org/wiki/ROT13">ROT13 algorithm</a>, also known as the Caesar cipher (with a shift of 13).</p>
+<p>Using the <a href="https://www.dcode.fr/cipher-identifier">cipher identifier</a> we can figure out it's encrypted using the <a href="https://en.wikipedia.org/wiki/ROT13">ROT13 algorithm</a>, also known as the Caesar cipher (with a shift of 13).</p>
 <p>Using the &quot;ROT13&quot; operation on CyberChef, we get our URL, and with it a bonus flag and the challenge itself.</p>
 <h3>A phishy email</h3>
 <p>You are given an email to download. Running <code>strings email.eml | grep KEY</code> does not yield any result.
-Opening it with an email application, we can see it has a docm attachement. Let's download it.
+Opening it with an email application, we can see it has a docm attachment. Let's download it.
 Running <code>strings</code> on it again, we do not see anything of interest.
 Let's open it with a document viewer, such as <a href="https://en.wikipedia.org/wiki/LibreOffice_Writer">LibreOffice Writer</a>.</p>
 <p>The form says something weird about needing to have macros enabled. Let's inspect the document's macros. In LibreOffice Writer, this is done with &quot;Tools&quot;, &quot;Macros&quot;, &quot;Edit Macros&quot;.</p>
