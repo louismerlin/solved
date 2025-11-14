@@ -138,7 +138,13 @@ The ELI issue came out in July 2025.
 
 The SALLY issue came out in August 2025.
 
-Waiting on the 3-month solution embargo, look back here soon.
+### [Cover Challenge](./04_cover.html)
+
+### [Crack the \*\*\*\*\*\*](./04_crack.html)
+
+### [Challenge #1 - EIEIO](./04_1.html)
+
+### [Challenge #2 - Reign](./04_2.html)
 
 </div>
 <div class="column img-column">
