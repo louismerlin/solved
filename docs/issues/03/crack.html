@@ -70,7 +70,6 @@ img {
   image-rendering: pixelated;
   width: 100%;
 }
-
 @media (min-width: 30.0rem) {
   .row {
     flex-direction: row;
@@ -78,18 +77,15 @@ img {
     width: calc(100% + 1rem);
     align-items: stretch;
   }
-
   .row .column {
     margin-bottom: inherit;
     padding: 0 .5rem;
   }
-
   .row .column.img-column {
     display: flex;
     justify-content: center;
     align-items: center; 
   }
-
   .row .column.img-column img {
     max-width: 50%;
     box-shadow: 0 0 .5rem #111;
@@ -101,23 +97,44 @@ img {
 <main>
 <br>
 <p><a href="./index.html">back to home</a></p>
-<h1>OGN Challenge #1</h1>
-<p>This challenge can be found when Dmitri aims his &quot;smart&quot; gun at Wheeler.</p>
+<h1>ELI Crack the ******</h1>
+<p>This challenge can be found on the inside of the cover of issue 3.</p>
 <h2>The Setup</h2>
-<blockquote>
-<p>Wheeler has gained access to the pirates' smart rifles via an interactive console. Help him take control of them!</p>
-</blockquote>
-<p>You will also get a console access command that uses the <code>nc</code> (netcat) command, and a python script for the server code.</p>
-<h2>The Decryption</h2>
-<p>Taking a look at the administrator login logic, we notice that the password that we input is compared to <code>admin_pw</code>.
-This variable is computed on the fly, using a static hard-coded value.
-If we execute the same computation, we should get the admin password in plaintext:</p>
-<pre><code>admin_pw_encrypted = '6d6e71775b7174727b7d6f6f536460506479774c677877656c4668727a717b40494f46565751545e'
-admin_pw = ''.join(chr(ord(c) ^ i) for i, c in enumerate(bytes.fromhex(admin_pw_encrypted).decode(&quot;utf-8&quot;)))
-print(admin_pw)
+<p>We're given four &quot;expressions&quot;:</p>
+<pre><code>^[ABC]?(N)+.*L$
+^N[A-E]{1}[A-Z]*?$
+^.[E-U]{2}[R-T]{1}..$
+^[A-Z]{2}[U-Z][RAM]A.$
 </code></pre>
-<p>Success! The password is <code>most_trusted_in_the_smart_rifle_industry</code>.</p>
-<p>Now, getting the flag requires you to connect to the server using the given command, pressing <code>2</code> to enter the admin login, entering the password, and then pressing <code>1</code> to activate the FRIEND-OR-FOE system.</p>
+<h2>The Match</h2>
+<p>These are <a href="https://en.wikipedia.org/wiki/Regular_expression">regular expressions</a>, or &quot;regex&quot;.
+They are usually used to match patterns on text.
+The word we have to find is the only 6-letter word that matches all expressions.</p>
+<p>Here are all of the symbols we need to know:</p>
+<pre><code>^     marks the beginning of a word
+$     marks the end of a word
+A     means there is a A here
+[XYZ] means that either X, Y or Z is in this spot
+[W-Z] means that one letter from W to Z is in this spot
+{5}   means there are 5 occurrences of the previous item
+.     means there can be any one character in this spot 
+*     means the previous item is repeated 0 or more times
++     means the previous item is repeated one or more times
+?     means the previous item is repeated 0 or 1 time
+( )   groups things together
+</code></pre>
+<p>With this, we can guess:</p>
+<pre><code>^[ABC]?(N)+.*L$        =&gt; One or more N in the first or second spot, L at the last spot
+^N[A-E]{1}[A-Z]*?$     =&gt; N in the first spot, then A to E in the second
+^.[E-U]{2}[R-T]{1}..$  =&gt; E to U in the second and third spot, R to T in the fourth
+^[A-Z]{2}[U-Z][RAM]A.$ =&gt; U to Z in the third spot, R, A or M in the fourth, A in the fifth
+</code></pre>
+<p>Already we can lock-in <code>N***AL</code></p>
+<p>The third spot is a letter from E to U and from U to Z, so it must be U.</p>
+<p><code>N*U*AL</code></p>
+<p>The fourth spot is a letter from R to T, but also has to be R, A or M, so it has to be R.</p>
+<p><code>N*URAL</code></p>
+<p>The second spot is a letter from A to E. Trying-out the five possibilities, only one is an English word. We've got our flag!</p>
 <br>
 <br>
 <footer>

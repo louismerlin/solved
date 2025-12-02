@@ -45,23 +45,23 @@ Here are links to other people who are doing the same thing:
 
 The OGN issue came out in May 2025.
 
-### [Cover Challenge](./01_cover.html)
+### [Cover Challenge](./01/cover.html)
 
-### [Crack the \*\*\*\*\*\*](./01_crack.html)
+### [Crack the \*\*\*\*\*\*](./01/crack.html)
 
-### [Challenge #1](./01_1.html)
+### [Challenge #1](./01/1.html)
 
-### [Challenge #2](./01_2.html)
+### [Challenge #2](./01/2.html)
 
-### [Challenge #3](./01_3.html)
+### [Challenge #3](./01/3.html)
 
-### [Challenge #4](./01_4.html)
+### [Challenge #4](./01/4.html)
 
-### [Challenge #5](./01_5.html)
+### [Challenge #5](./01/5.html)
 
-### [Challenge #6](./01_6.html)
+### [Challenge #6](./01/6.html)
 
-### [Challenge #7](./01_7.html)
+### [Challenge #7](./01/7.html)
 
 ### Challenge #8
 
@@ -77,11 +77,11 @@ We're not allowed to share this one, but maybe you can find a second-hand copy o
 
 ## 99 - Other
 
-### [Kickstarter Announcement](./99_announcement.html)
+### [Kickstarter Announcement](./other/announcement.html)
 
-### [Kickstarter Challenges](./99_kickstarter.html)
+### [Kickstarter Challenges](./other/kickstarter.html)
 
-### [Ashcan Challenge](./99_ashcan.html)
+### [Ashcan Challenge](./other/ashcan.html)
 
 <br>
 
@@ -92,13 +92,13 @@ We're not allowed to share this one, but maybe you can find a second-hand copy o
 
 The MARTINA issue came out in June 2025.
 
-### [Cover Challenge](./02_cover.html)
+### [Cover Challenge](./02/cover.html)
 
-### [Crack the \*\*\*\*\*\*](./02_crack.html)
+### [Crack the \*\*\*\*\*\*](./02/crack.html)
 
-### [Challenge #1 - White Wolf](./02_1.html)
+### [Challenge #1 - White Wolf](./02/1.html)
 
-### [Challenge #2 - Penance](./02_2.html)
+### [Challenge #2 - Penance](./02/2.html)
 
 </div>
 <div class="column img-column">
@@ -115,13 +115,13 @@ The MARTINA issue came out in June 2025.
 
 The ELI issue came out in July 2025.
 
-### [Cover Challenge](./03_cover.html)
+### [Cover Challenge](./03/cover.html)
 
-### [Crack the \*\*\*\*\*\*](./03_crack.html)
+### [Crack the \*\*\*\*\*\*](./03/crack.html)
 
-### [Challenge #1 - Sneaks](./03_1.html)
+### [Challenge #1 - Sneaks](./03/1.html)
 
-### [Challenge #2 - Helipad](./03_2.html)
+### [Challenge #2 - Helipad](./03/2.html)
 
 </div>
 <div class="column img-column">
@@ -138,13 +138,13 @@ The ELI issue came out in July 2025.
 
 The SALLY issue came out in August 2025.
 
-### [Cover Challenge](./04_cover.html)
+### [Cover Challenge](./04/cover.html)
 
-### [Crack the \*\*\*\*\*\*](./04_crack.html)
+### [Crack the \*\*\*\*\*\*](./04/crack.html)
 
-### [Challenge #1 - EIEIO](./04_1.html)
+### [Challenge #1 - EIEIO](./04/1.html)
 
-### [Challenge #2 - Reign](./04_2.html)
+### [Challenge #2 - Reign](./04/2.html)
 
 </div>
 <div class="column img-column">
@@ -229,6 +229,21 @@ The 9th issue will come out in January 2026.
 </div>
 <div class="column img-column">
 <img alt="09 (TBD) Cover" src="./images/09.jpg">
+</div>
+</div>
+
+<br>
+
+## 10 - TBD
+
+<div class="row">
+<div class="column">
+
+The 10th issue will come out in February 2026.
+
+</div>
+<div class="column img-column">
+<img alt="10 (TBD) Cover" src="./images/10.jpg">
 </div>
 </div>
 

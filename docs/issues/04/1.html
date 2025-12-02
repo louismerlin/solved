@@ -97,44 +97,18 @@ img {
 <main>
 <br>
 <p><a href="./index.html">back to home</a></p>
-<h1>ELI Crack the ******</h1>
-<p>This challenge can be found on the inside of the cover of issue 3.</p>
+<h1>SALLY Challenge #1 - EIEIO</h1>
+<p>This challenge can be found when Sally has her first chat with Wheeler.</p>
 <h2>The Setup</h2>
-<p>We're given four &quot;expressions&quot;:</p>
-<pre><code>^[ABC]?(N)+.*L$
-^N[A-E]{1}[A-Z]*?$
-^.[E-U]{2}[R-T]{1}..$
-^[A-Z]{2}[U-Z][RAM]A.$
-</code></pre>
-<h2>The Match</h2>
-<p>These are <a href="https://en.wikipedia.org/wiki/Regular_expression">regular expressions</a>, or &quot;regex&quot;.
-They are usually used to match patterns on text.
-The word we have to find is the only 6-letter word that matches all expressions.</p>
-<p>Here are all of symbols we need to know:</p>
-<pre><code>^     marks the beginning of a word
-$     marks the end of a word
-A     means there is a A here
-[XYZ] means that either X, Y or Z is in this spot
-[W-Z] means that one letter from W to Z is in this spot
-{5}   means there are 5 occurences of the previous item
-.     means there can be any one character in this spot 
-*     means the previous item is repeated 0 or more times
-+     means the previous item is repeated one or more times
-?     means the previous item is repeated 0 or 1 time
-( )   groups things together
-</code></pre>
-<p>With this, we can guess:</p>
-<pre><code>^[ABC]?(N)+.*L$        =&gt; One or more N in the first or second spot, L at the last spot
-^N[A-E]{1}[A-Z]*?$     =&gt; N in the first spot, then A to E in the second
-^.[E-U]{2}[R-T]{1}..$  =&gt; E to U in the second and third spot, R to T in the fourth
-^[A-Z]{2}[U-Z][RAM]A.$ =&gt; U to Z in the third spot, R, A or M in the fourth, A in the fifth
-</code></pre>
-<p>Already we can lock-in <code>N***AL</code></p>
-<p>The third spot is a letter from E to U and from U to Z, so it must be U.</p>
-<p><code>N*U*AL</code></p>
-<p>The fourth spot is a letter from R to T, but also has to be R, A or M, so it has to be R.</p>
-<p><code>N*URAL</code></p>
-<p>The second spot is a letter from A to E. Trying-out the five possibilities, only one is an english word. We've got our flag!</p>
+<blockquote>
+<p>Help Sally break into the satellite and turn on Kabelo's tractor.</p>
+</blockquote>
+<p>We are given access to a control panel URL.</p>
+<h2>The Source</h2>
+<p>The control panel is protected by a login screen.</p>
+<p>First thing I usually do when looking at a web page is &quot;inspect source&quot;.</p>
+<p>This is a hit! An HTML comment mentions a default username/password combination.
+After getting access to the control panel, we flick the &quot;Priority Override&quot; switch, click &quot;Apply&quot;, and we get our flag.</p>
 <br>
 <br>
 <footer>

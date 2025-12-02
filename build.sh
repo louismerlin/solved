@@ -1,11 +1,14 @@
 #!/bin/sh
 mkdir -p docs
-for md_file in src/*.md; do
-  if [ -f "$md_file" ]; then
-    basename=$(basename "$md_file" .md)
-    html_file="docs/${basename}.html"
-    cat header.html > "$html_file"
-    cmark --unsafe "$md_file" >> "$html_file"
-    cat footer.html >> "$html_file"
-  fi
+
+find src -name '*.md' | sort | while read -r md_file; do
+  [ -f "$md_file" ] || continue
+
+  rel_path="${md_file#src/}"
+  html_file="docs/${rel_path%.md}.html"
+
+  mkdir -p "$(dirname "$html_file")"
+  cat header.html > "$html_file"
+  cmark --unsafe "$md_file" >> "$html_file"
+  cat footer.html >> "$html_file"
 done

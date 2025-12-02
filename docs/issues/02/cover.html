@@ -70,7 +70,6 @@ img {
   image-rendering: pixelated;
   width: 100%;
 }
-
 @media (min-width: 30.0rem) {
   .row {
     flex-direction: row;
@@ -78,18 +77,15 @@ img {
     width: calc(100% + 1rem);
     align-items: stretch;
   }
-
   .row .column {
     margin-bottom: inherit;
     padding: 0 .5rem;
   }
-
   .row .column.img-column {
     display: flex;
     justify-content: center;
     align-items: center; 
   }
-
   .row .column.img-column img {
     max-width: 50%;
     box-shadow: 0 0 .5rem #111;
@@ -101,12 +97,17 @@ img {
 <main>
 <br>
 <p><a href="./index.html">back to home</a></p>
-<h1>MARTINA Challenge #1</h1>
-<p>This challenge can be found {}</p>
-<h2>The Setup</h2>
-<blockquote>
-</blockquote>
-<h2></h2>
+<h1>MARTINA Cover Challenge</h1>
+<p>This challenge can be found on the cover of issue 2. Spot the long string of characters in the bottom-left under Martina's knee.</p>
+<h2>The Address?</h2>
+<p>This long string of hexadecimal characters punctuated by <code>:</code> colons looks like an IPv6 address.</p>
+<p>However, trying to get the content at this address does not return anything.</p>
+<pre><code class="language-bash">$ curl -6 http://[the_address_on_the_cover]
+curl: (7) Failed to connect to the_address_on_the_cover port 80 after 0 ms: Could not connect to server
+</code></pre>
+<h2>The Code</h2>
+<p>This is actually just hex-encoded data. You can decode it with <a href="https://gchq.github.io/CyberChef/#recipe=From_Hex(&#x27;Auto&#x27;)">CyberChef</a> for example.</p>
+<p>It decodes to a URL, which contains the flag.</p>
 <br>
 <br>
 <footer>
