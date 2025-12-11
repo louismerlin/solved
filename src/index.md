@@ -35,6 +35,7 @@ Here are links to other people who are doing the same thing:
 - [Setral's GitHub repo](https://github.com/setral/CTF_Writeups/tree/main/The%20Future%20is%20******)
 - [Skycritch's website](https://www.skycritch.com/the-future-is/)
 - [joshb's blog](https://itsjoshb.com/blog/martina-white-wolf/)
+- John Hammond's videos - [1](https://www.youtube.com/watch?v=lk9_h5DoDMw) [2](https://www.youtube.com/watch?v=Oiv3TaIR9UY)
 
 <br>
 
@@ -161,7 +162,13 @@ The SALLY issue came out in August 2025.
 
 The ART/ARF issue came out in September 2025.
 
-Waiting on the 3-month solution embargo, look back here soon.
+### [Cover Challenge](./05/cover.html)
+
+### [Crack the \*\*\*\*\*\*](./05/crack.html)
+
+### [Challenge #1 - DOOMSCROLL](./05/1.html)
+
+### [Challenge #2 - Fire](./05/2.html)
 
 </div>
 <div class="column img-column">
@@ -193,7 +200,9 @@ Waiting on the 3-month solution embargo, look back here soon.
 <div class="row">
 <div class="column">
 
-The WHEELER, pt. 2 issue will come out in November 2025.
+The WHEELER, pt. 2 issue came out in November 2025.
+
+Waiting on the 3-month solution embargo, look back here soon.
 
 </div>
 <div class="column img-column">
