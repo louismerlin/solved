@@ -1,6 +1,6 @@
 [back to home](./index.html)
 
-# SALLY Cover Challenge
+# ART/ARF Cover Challenge
 
 This challenge can be found on the cover of issue 5. Spot the numbers in a vertical line in the bottom right.
 

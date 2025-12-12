@@ -1,6 +1,6 @@
 [back to home](./index.html)
 
-# SALLY Crack the \*\*\*\*\*\*
+# ART/ARF Crack the \*\*\*\*\*\*
 
 This challenge can be found on the inside of the cover of issue 5.
 
