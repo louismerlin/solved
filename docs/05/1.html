@@ -34,6 +34,22 @@ h2 {
 a {
   text-decoration-color: var(--neon-orange);
 }
+.tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin: 0.5rem 0 1rem;
+  padding: 0;
+}
+.tag {
+  display: inline-block;
+  border: 0.1rem solid var(--fg);
+  border-radius: 999px;
+  padding: 0.15rem 0.6rem;
+  font-size: 0.85rem;
+  letter-spacing: 0.02em;
+  background: var(--bg);
+}
 pre {
   border-left: .3rem solid var(--neon-pink);
 }
@@ -84,7 +100,7 @@ img {
   .row .column.img-column {
     display: flex;
     justify-content: center;
-    align-items: center; 
+    align-items: center;
   }
   .row .column.img-column img {
     max-width: 50%;
@@ -114,8 +130,8 @@ You can defeat the monsters at close range by hitting the space bar. They will e
 <p>After some playing around, I figured out that points do not reset after you die, so in theory it is possible to get 5 points, get killed by the last monster, do it again 200 times until you get to 1000 points. I have not tried this and would not recommend it. There is a better way.</p>
 <p>Taking a look at the Network tab from the Web Developer Tools of my browser, I can see that when I reload the page, a <code>js</code>, <code>wasm</code> and <code>pck</code> file are loaded.
 The <code>js</code> is JavaScript and will tell the browser how to load the two other files.
-The <code>wasm</code> is WebAssembly and contains the game logic (such as the 1000 point limit or what happens when I press buttons).
-The <code>pck</code> contains the game assets, such as the images and text.</p>
+The <code>wasm</code> is WebAssembly and contains the game logic (such as what happens when I press buttons).
+The <code>pck</code> contains the game assets, such as the images, constants and text.</p>
 <p>By right-clicking on each request you can &quot;Save Response As&quot; and save each file. Now, let's run our trusted friend <code>strings</code>:</p>
 <pre><code class="language-bash">$ strings doomscroll-quest.js | grep KEY{
 
