@@ -1,4 +1,4 @@
-[back to home](./index.html)
+[back to home](../index.html)
 
 # ART/ARF Crack the \*\*\*\*\*\*
 
