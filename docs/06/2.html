@@ -97,13 +97,21 @@ img {
 <main>
 <br>
 <p><a href="./index.html">back to home</a></p>
-<h1>ART/ARF Crack the ******</h1>
-<p>This challenge can be found on the inside of the cover of issue 5.</p>
-<h2>The Pattern</h2>
-<p>We are given an image of alien-looking symetrical symbols.</p>
-<p>At first I tried doing some image modifications on the image, as it seems to be split-up in quadrants.
-I tried moving the top third of the image to the left and right, the bottom third of the image to the left and right (using gimp), but this did not make it look like any symbol I recognized.</p>
-<p>Finally, like I often do, I turned to <a href="https://www.dcode.fr/symbols-ciphers">dcode's symbols cipher list</a>, which made me discover the <a href="https://www.dcode.fr/betamaze-cipher">betamaze cipher</a>, which is the code used for this challenge!</p>
+<h1>WHEELER, pt. 1 Challenge #2 - Sewer</h1>
+<p>This challenge can be found when Eli redirects all sewer traffic and creates a brown alert.</p>
+<h2>The Setup</h2>
+<blockquote>
+<p>At Chalon Sombreo Ski Resort, the pipes aren’t the only thing leaking, it looks like the developers’ code is springing leaks too.</p>
+<p>Can you trace the drips in their system and uncover the hidden valve control?</p>
+</blockquote>
+<p>We are given a URL to a dashboard.</p>
+<h2>The Docs</h2>
+<p>The first thing I do every time when given a webpage as a challenge is right-click and <code>View Page Source</code>.</p>
+<p>Doesn't miss this time, there is an HTML comment near the bottom:</p>
+<pre><code>&lt;!-- TODO: Developer note: for internal API docs check /docs --&gt;
+</code></pre>
+<p>Nice! Checking-out the <code>/docs</code> page, we see an &quot;admin&quot; route called <code>/sewer/valve_control</code>.
+You can either use the &quot;Try it out&quot; button or go to that page directly, and the flag is there on the page.</p>
 <br>
 <br>
 <footer>

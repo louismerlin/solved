@@ -97,13 +97,37 @@ img {
 <main>
 <br>
 <p><a href="./index.html">back to home</a></p>
-<h1>ART/ARF Crack the ******</h1>
-<p>This challenge can be found on the inside of the cover of issue 5.</p>
-<h2>The Pattern</h2>
-<p>We are given an image of alien-looking symetrical symbols.</p>
-<p>At first I tried doing some image modifications on the image, as it seems to be split-up in quadrants.
-I tried moving the top third of the image to the left and right, the bottom third of the image to the left and right (using gimp), but this did not make it look like any symbol I recognized.</p>
-<p>Finally, like I often do, I turned to <a href="https://www.dcode.fr/symbols-ciphers">dcode's symbols cipher list</a>, which made me discover the <a href="https://www.dcode.fr/betamaze-cipher">betamaze cipher</a>, which is the code used for this challenge!</p>
+<h1>WHEELER, pt. 1 Challenge #1 - DNA</h1>
+<p>This challenge can be found when Martina collects DNA samples.</p>
+<h2>The Setup</h2>
+<blockquote>
+<p>Martina got these 2 files from the dna scanner: dna1.txt, dna2.txt</p>
+<p>There is something more hidden in those files, can you find it?</p>
+<p>Hint: T-&gt;00, A-&gt;01, C-&gt;10, G-&gt;11</p>
+</blockquote>
+<p>We are given two .txt files.</p>
+<h2>The Sequence</h2>
+<p>The two text files each contain a list of <a href="https://en.wikipedia.org/wiki/Base_pair">base pairs</a>, for example <code>GC</code>, <code>TT</code> or <code>GA</code>.</p>
+<p>There are 90 pairs in each sequence.</p>
+<p>We are given the hint: T-&gt;00, A-&gt;01, C-&gt;10, G-&gt;11</p>
+<p>Here are all of the things I tried:</p>
+<ul>
+<li>&quot;simple&quot; decoding</li>
+<li>combining the two files' columns</li>
+<li>taking the complement and decoding these</li>
+<li>doing both previous things together.</li>
+</ul>
+<p>After that, I wondered &quot;why would they give us two files?&quot;, and this is the insight that led me to the solution.</p>
+<p>With two files, you can compare them with each other. So I did, and I noticed that at each line, either they had the same pair, or they had at least one element in common.</p>
+<p>This led me to the solution:</p>
+<ol>
+<li>Find positions where the two DNA files differ</li>
+<li>Take only the differing bases from DNA2 (not DNA1!)</li>
+<li>Convert those bases to binary using the hint (T=00, A=01, C=10, G=11)</li>
+<li>Decode to ASCII</li>
+</ol>
+<p>From my experience, and the experience of a lot of people on the comic's Discord, this was the hardest challenge yet.
+It was frustrating to solve at times, but extremely rewarding in the end.</p>
 <br>
 <br>
 <footer>

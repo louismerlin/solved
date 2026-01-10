@@ -185,7 +185,13 @@ The ART/ARF issue came out in September 2025.
 
 The WHEELER, pt. 1 issue came out in October 2025.
 
-Waiting on the 3-month solution embargo, look back here soon.
+### [Cover Challenge](./06/cover.html)
+
+### [Crack the \*\*\*\*\*\*](./06/crack.html)
+
+### [Challenge #1 - DNA](./06/1.html)
+
+### [Challenge #2 - Sewer](./06/2.html)
 
 </div>
 <div class="column img-column">

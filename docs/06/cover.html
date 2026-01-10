@@ -97,13 +97,17 @@ img {
 <main>
 <br>
 <p><a href="./index.html">back to home</a></p>
-<h1>ART/ARF Crack the ******</h1>
-<p>This challenge can be found on the inside of the cover of issue 5.</p>
-<h2>The Pattern</h2>
-<p>We are given an image of alien-looking symetrical symbols.</p>
-<p>At first I tried doing some image modifications on the image, as it seems to be split-up in quadrants.
-I tried moving the top third of the image to the left and right, the bottom third of the image to the left and right (using gimp), but this did not make it look like any symbol I recognized.</p>
-<p>Finally, like I often do, I turned to <a href="https://www.dcode.fr/symbols-ciphers">dcode's symbols cipher list</a>, which made me discover the <a href="https://www.dcode.fr/betamaze-cipher">betamaze cipher</a>, which is the code used for this challenge!</p>
+<h1>WHEELER, pt. 1 Cover Challenge</h1>
+<p>This challenge can be found on the cover of issue 6. Spot the letters in the bottom right corner.</p>
+<h2>The Mirror</h2>
+<p>The letters are printed backwards, and they read:</p>
+<pre><code>GURXLNRX.RL/TIVBDLOU
+</code></pre>
+<p>We can easily spot the usual pattern of <code>TFICOMIC.IO/SOMETHING</code>.
+Now we need to reverse-engineer the code to get the last part.</p>
+<p>Using <a href="https://gchq.github.io/CyberChef/">CyberChef</a>, I try different character rotations (<a href="https://en.wikipedia.org/wiki/Caesar_cipher">Caesar Cipher</a>) without getting anywhere.</p>
+<p>That's when I realize, the characters being printed backwards was a hint: R definitely corresponds to I (because we know the base url is <code>tficomic.io</code>), I is the 9th letter of the alphabet and R is the 9th letter starting from the end.
+Applying that logic to every letter, we get our URL, which leads us to the flag.</p>
 <br>
 <br>
 <footer>
