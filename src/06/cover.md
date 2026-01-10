@@ -1,4 +1,4 @@
-[back to home](./index.html)
+[back to home](../index.html)
 
 # WHEELER, pt. 1 Cover Challenge
 
