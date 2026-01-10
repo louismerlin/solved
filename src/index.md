@@ -222,23 +222,25 @@ Waiting on the 3-month solution embargo, look back here soon.
 
 <br>
 
-## <a id="issue-08"></a> 08 - TBD
+## <a id="issue-08"></a> 08 - GLASSHEADS, pt. 1
 
 <div class="row">
 <div class="column">
 
-The 8th issue will come out in December 2025.
+The 8th issue came out in December 2025.
+
+Waiting on the 3-month solution embargo, look back here soon.
 
 </div>
 <div class="column img-column">
-<img alt="08 (TBD) Cover" src="./images/08.jpg">
-<img alt="08 (TBD) Alternative Cover" src="./images/08b.jpg">
+<img alt="08 (GLASSHEADS, pt. 1) Cover" src="./images/08.jpg">
+<img alt="08 (GLASSHEADS, pt. 1) Alternative Cover" src="./images/08b.jpg">
 </div>
 </div>
 
 <br>
 
-## <a id="issue-09"></a> 09 - TBD
+## <a id="issue-09"></a> 09 - GLASSHEADS, pt. 2
 
 <div class="row">
 <div class="column">
@@ -247,7 +249,8 @@ The 9th issue will come out in January 2026.
 
 </div>
 <div class="column img-column">
-<img alt="09 (TBD) Cover" src="./images/09.jpg">
+<img alt="09 (GLASSHEADS, pt. 2) Cover" src="./images/09.jpg">
+<img alt="09 (GLASSHEADS, pt. 2) Alternative Cover" src="./images/09b.jpg">
 </div>
 </div>
 
