@@ -39,7 +39,11 @@ Here are links to other people who are doing the same thing:
 
 <br>
 
-## 01 - OGN
+[01](#issue-01) | [02](#issue-02) | [03](#issue-03) | [04](#issue-04) | [05](#issue-05) | [06](#issue-06) | [07](#issue-07) | [08](#issue-08) | [09](#issue-09) | [10](#issue-10) | [11](#issue-11) | [Other](#other-99)
+
+<br>
+
+## <a id="issue-01"></a> 01 - OGN
 
 <div class="row">
 <div class="column">
@@ -76,7 +80,7 @@ We're not allowed to share this one, but maybe you can find a second-hand copy o
 
 <br>
 
-## 99 - Other
+## <a id="other-99"></a> 99 - Other
 
 ### [Kickstarter Announcement](./other/announcement.html)
 
@@ -86,7 +90,7 @@ We're not allowed to share this one, but maybe you can find a second-hand copy o
 
 <br>
 
-## 02 - MARTINA
+## <a id="issue-02"></a> 02 - MARTINA
 
 <div class="row">
 <div class="column">
@@ -109,7 +113,7 @@ The MARTINA issue came out in June 2025.
 
 <br>
 
-## 03 - ELI
+## <a id="issue-03"></a> 03 - ELI
 
 <div class="row">
 <div class="column">
@@ -132,7 +136,7 @@ The ELI issue came out in July 2025.
 
 <br>
 
-## 04 - SALLY
+## <a id="issue-04"></a> 04 - SALLY
 
 <div class="row">
 <div class="column">
@@ -155,7 +159,7 @@ The SALLY issue came out in August 2025.
 
 <br>
 
-## 05 - ART/ARF 
+## <a id="issue-05"></a> 05 - ART/ARF 
 
 <div class="row">
 <div class="column">
@@ -178,7 +182,7 @@ The ART/ARF issue came out in September 2025.
 
 <br>
 
-## 06 - WHEELER, pt. 1
+## <a id="issue-06"></a> 06 - WHEELER, pt. 1
 
 <div class="row">
 <div class="column">
@@ -201,7 +205,7 @@ The WHEELER, pt. 1 issue came out in October 2025.
 
 <br>
 
-## 07 - WHEELER, pt. 2
+## <a id="issue-07"></a> 07 - WHEELER, pt. 2
 
 <div class="row">
 <div class="column">
@@ -218,7 +222,7 @@ Waiting on the 3-month solution embargo, look back here soon.
 
 <br>
 
-## 08 - TBD
+## <a id="issue-08"></a> 08 - TBD
 
 <div class="row">
 <div class="column">
@@ -234,7 +238,7 @@ The 8th issue will come out in December 2025.
 
 <br>
 
-## 09 - TBD
+## <a id="issue-09"></a> 09 - TBD
 
 <div class="row">
 <div class="column">
@@ -249,7 +253,7 @@ The 9th issue will come out in January 2026.
 
 <br>
 
-## 10 - TBD
+## <a id="issue-10"></a> 10 - TBD
 
 <div class="row">
 <div class="column">
@@ -259,6 +263,21 @@ The 10th issue will come out in February 2026.
 </div>
 <div class="column img-column">
 <img alt="10 (TBD) Cover" src="./images/10.jpg">
+</div>
+</div>
+
+<br>
+
+## <a id="issue-11"></a> 11 - TBD
+
+<div class="row">
+<div class="column">
+
+The 11th issue will come out in March 2026.
+
+</div>
+<div class="column img-column">
+<img alt="11 (TBD) Cover" src="./images/11.jpg">
 </div>
 </div>
 
