@@ -34,6 +34,22 @@ h2 {
 a {
   text-decoration-color: var(--neon-orange);
 }
+.tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin: 0.5rem 0 1rem;
+  padding: 0;
+}
+.tag {
+  display: inline-block;
+  border: 0.1rem solid var(--fg);
+  border-radius: 999px;
+  padding: 0.15rem 0.6rem;
+  font-size: 0.85rem;
+  letter-spacing: 0.02em;
+  background: var(--bg);
+}
 pre {
   border-left: .3rem solid var(--neon-pink);
 }
@@ -84,7 +100,7 @@ img {
   .row .column.img-column {
     display: flex;
     justify-content: center;
-    align-items: center; 
+    align-items: center;
   }
   .row .column.img-column img {
     max-width: 50%;
