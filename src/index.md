@@ -212,7 +212,7 @@ The WHEELER, pt. 1 issue came out in October 2025.
 
 The WHEELER, pt. 2 issue came out in November 2025.
 
-Waiting on the 3-month solution embargo, look back here soon.
+Waiting on the 3-month solution embargo, look back here very soon.
 
 </div>
 <div class="column img-column">
@@ -245,7 +245,9 @@ Waiting on the 3-month solution embargo, look back here soon.
 <div class="row">
 <div class="column">
 
-The 9th issue will come out in January 2026.
+The 9th issue came out in January 2026.
+
+Waiting on the 3-month solution embargo, look back here soon.
 
 </div>
 <div class="column img-column">
@@ -256,7 +258,7 @@ The 9th issue will come out in January 2026.
 
 <br>
 
-## <a id="issue-10"></a> 10 - TBD
+## <a id="issue-10"></a> 10 - GLASSHEADS, pt. 3
 
 <div class="row">
 <div class="column">
@@ -265,13 +267,14 @@ The 10th issue will come out in February 2026.
 
 </div>
 <div class="column img-column">
-<img alt="10 (TBD) Cover" src="./images/10.jpg">
+<img alt="10 (GLASSHEADS, pt. 3) Cover" src="./images/10.jpg">
+<img alt="09 (GLASSHEADS, pt. 3) Alternative Cover" src="./images/10b.jpg">
 </div>
 </div>
 
 <br>
 
-## <a id="issue-11"></a> 11 - TBD
+## <a id="issue-11"></a> 11 - GLASSHEADS, pt. 4
 
 <div class="row">
 <div class="column">
@@ -280,7 +283,22 @@ The 11th issue will come out in March 2026.
 
 </div>
 <div class="column img-column">
-<img alt="11 (TBD) Cover" src="./images/11.jpg">
+<img alt="11 (GLASSHEADS, pt. 4) Cover" src="./images/11.jpg">
+</div>
+</div>
+
+<br>
+
+## <a id="issue-12"></a> 12 - GLASSHEADS, pt. 5
+
+<div class="row">
+<div class="column">
+
+The 12th issue will come out in April 2026.
+
+</div>
+<div class="column img-column">
+<img alt="11 (GLASSHEADS, pt. 5) Cover" src="./images/12.jpg">
 </div>
 </div>
 
