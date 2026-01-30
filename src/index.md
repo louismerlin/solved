@@ -39,7 +39,7 @@ Here are links to other people who are doing the same thing:
 
 <br>
 
-[01](#issue-01) | [02](#issue-02) | [03](#issue-03) | [04](#issue-04) | [05](#issue-05) | [06](#issue-06) | [07](#issue-07) | [08](#issue-08) | [09](#issue-09) | [10](#issue-10) | [11](#issue-11) | [Other](#other-99)
+[01](#issue-01) | [02](#issue-02) | [03](#issue-03) | [04](#issue-04) | [05](#issue-05) | [06](#issue-06) | [07](#issue-07) | [08](#issue-08) | [09](#issue-09) | [10](#issue-10) | [11](#issue-11) | [12](#issue-12) | [Other](#other-99)
 
 <br>
 
