@@ -128,7 +128,13 @@ KEY{something}
 <p>Another way to get the flag, a bit more cumbersomely, is via <a href="https://github.com/GDRETools/gdsdecomp">gdsdecomp</a>, which is a reverse engineering tool for Godot projects.
 After decompiling the <code>.pck</code> file, you can find the flag in the <code>scenes/flag.tscn</code> file.</p>
 <p>There was some discussion in the comic's Discord where people were wondering if this was the &quot;intended&quot; solution, and after taking a hard look at the files given, my impression is that it is. I could find no underflow to exploit, no backdoor to invoke to solve this challenge directly from the browser.</p>
-<p>If you found an alternative way of getting to the flag, I would be happy to document it here, shoot me an email!</p>
+<h2>Eli's shortcut</h2>
+<p>Eli shared a shortcut to the flag: you can just download one of the zips, unzip it and run strings on everything.</p>
+<p>But you can go even simpler than that: extract in-place in the pipe to strings.</p>
+<pre><code class="language-bash">unzip -p linux.zip | strings -n 11 | grep 'KEY{'
+</code></pre>
+<p>This also works with <code>windows.zip</code> and <code>macos.zip</code>.</p>
+<p>If you found another alternative way of getting to the flag, I would be happy to document it here, shoot me an email!</p>
 <br>
 <br>
 <footer>
