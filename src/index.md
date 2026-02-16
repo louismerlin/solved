@@ -88,6 +88,8 @@ We're not allowed to share this one, but maybe you can find a second-hand copy o
 
 ### [Ashcan Challenge](./other/ashcan.html)
 
+### [Kickstarter 2 Challenges](./other/kickstarter_2.html)
+
 <br>
 
 ## <a id="issue-02"></a> 02 - MARTINA
