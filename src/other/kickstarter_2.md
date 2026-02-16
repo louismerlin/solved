@@ -108,7 +108,7 @@ We now replace the `Key` field with `0eca` (make sure to select `Hex` in the dro
 
 Here is our URL!
 
-## The Network
+### The Network
 
 There is the real challenge at the given URL, as well as a bonus flag.
 
