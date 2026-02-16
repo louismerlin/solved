@@ -212,7 +212,13 @@ The WHEELER, pt. 1 issue came out in October 2025.
 
 The WHEELER, pt. 2 issue came out in November 2025.
 
-Waiting on the 3-month solution embargo, look back here very soon.
+### [Cover Challenge](./07/cover.html)
+
+### [Crack the \*\*\*\*\*\*](./07/crack.html)
+
+### [Challenge #1 - Intruder](./07/1.html)
+
+### [Challenge #2 - Stocks](./07/2.html)
 
 </div>
 <div class="column img-column">
@@ -263,7 +269,9 @@ Waiting on the 3-month solution embargo, look back here soon.
 <div class="row">
 <div class="column">
 
-The 10th issue will come out in February 2026.
+The 10th issue came out in February 2026.
+
+Waiting on the 3-month solution embargo, look back here soon.
 
 </div>
 <div class="column img-column">
