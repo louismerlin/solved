@@ -278,7 +278,7 @@ Waiting on the 3-month solution embargo, look back here soon.
 </div>
 <div class="column img-column">
 <img alt="10 (GLASSHEADS, pt. 3) Cover" src="./images/10.jpg">
-<img alt="09 (GLASSHEADS, pt. 3) Alternative Cover" src="./images/10b.jpg">
+<img alt="10 (GLASSHEADS, pt. 3) Alternative Cover" src="./images/10b.jpg">
 </div>
 </div>
 
@@ -294,6 +294,7 @@ The 11th issue will come out in March 2026.
 </div>
 <div class="column img-column">
 <img alt="11 (GLASSHEADS, pt. 4) Cover" src="./images/11.jpg">
+<img alt="11 (GLASSHEADS, pt. 4) Alternative Cover" src="./images/11b.jpg">
 </div>
 </div>
 
@@ -308,7 +309,22 @@ The 12th issue will come out in April 2026.
 
 </div>
 <div class="column img-column">
-<img alt="11 (GLASSHEADS, pt. 5) Cover" src="./images/12.jpg">
+<img alt="12 (GLASSHEADS, pt. 5) Cover" src="./images/12.jpg">
+</div>
+</div>
+
+<br>
+
+## <a id="issue-13"></a> 13 - ???
+
+<div class="row">
+<div class="column">
+
+The 13th issue will come out in May 2026.
+
+</div>
+<div class="column img-column">
+<img alt="13 (???) Cover" src="./images/13.jpg">
 </div>
 </div>
 
