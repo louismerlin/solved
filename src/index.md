@@ -289,7 +289,9 @@ Waiting on the 3-month solution embargo, look back here soon.
 <div class="row">
 <div class="column">
 
-The 11th issue will come out in March 2026.
+The 11th issue came out in March 2026.
+
+Waiting on the 3-month solution embargo, look back here soon.
 
 </div>
 <div class="column img-column">
@@ -310,6 +312,7 @@ The 12th issue will come out in April 2026.
 </div>
 <div class="column img-column">
 <img alt="12 (GLASSHEADS, pt. 5) Cover" src="./images/12.jpg">
+<img alt="12 (GLASSHEADS, pt. 5) Alternative Cover" src="./images/12b.jpg">
 </div>
 </div>
 
