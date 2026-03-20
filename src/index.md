@@ -237,7 +237,13 @@ The WHEELER, pt. 2 issue came out in November 2025.
 
 The 8th issue came out in December 2025.
 
-Waiting on the 3-month solution embargo, look back here soon.
+### [Cover Challenge](./08/cover.html)
+
+### [Crack the \*\*\*\*\*\*](./08/crack.html)
+
+### [Challenge #1 - Heyward](./08/1.html)
+
+### [Challenge #2 - Java](./08/2.html)
 
 </div>
 <div class="column img-column">
