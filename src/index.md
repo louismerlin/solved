@@ -324,7 +324,7 @@ The 12th issue will come out in April 2026.
 
 <br>
 
-## <a id="issue-13"></a> 13 - ???
+## <a id="issue-13"></a> 13 - PSYCHORAPTURE, pt. 1
 
 <div class="row">
 <div class="column">
@@ -333,13 +333,13 @@ The 13th issue will come out in May 2026.
 
 </div>
 <div class="column img-column">
-<img alt="13 (???) Cover" src="./images/13.jpg">
+<img alt="13 (PSYCHORAPTURE, pt. 1) Cover" src="./images/13.jpg">
 </div>
 </div>
 
 <br>
 
-## <a id="issue-14"></a> 14 - ???
+## <a id="issue-14"></a> 14 - PSYCHORAPTURE, pt. 2
 
 <div class="row">
 <div class="column">
@@ -348,8 +348,8 @@ The 14th issue will come out in June 2026.
 
 </div>
 <div class="column img-column">
-<img alt="14 (???) Cover" src="./images/14.jpg">
-<img alt="14 (???) Alternative Cover" src="./images/14b.jpg">
+<img alt="14 (PSYCHORAPTURE, pt. 2) Cover" src="./images/14.jpg">
+<img alt="14 (PSYCHORAPTURE, pt. 2) Alternative Cover" src="./images/14b.jpg">
 </div>
 </div>
 
