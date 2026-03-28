@@ -28,7 +28,7 @@ function flick() {
 setTimeout(flick, 1000);
 </script>
 
-On this website, I'll show you how to solve challenges from *The Future Is \*\*\*\*\*\** from [REKAH Comics](https://www.blackhillsinfosec.com/rekcah/).
+On this website, I'll show you how to solve challenges from *The Future Is \*\*\*\*\*\** from [REKCAH Comics](https://www.blackhillsinfosec.com/rekcah/).
 
 Here are links to other people who are doing the same thing:
 
