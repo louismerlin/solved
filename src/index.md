@@ -261,7 +261,13 @@ The 8th issue came out in December 2025.
 
 The 9th issue came out in January 2026.
 
-Waiting on the 3-month solution embargo, look back here soon.
+### [Cover Challenge](./09/cover.html)
+
+### [Crack the \*\*\*\*\*\*](./09/crack.html)
+
+### [Challenge #1 - Winston](./09/1.html)
+
+### [Challenge #2 - Insider](./09/2.html)
 
 </div>
 <div class="column img-column">
