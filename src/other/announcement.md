@@ -4,7 +4,7 @@
 
 The [social media announcement](https://x.com/BHinfoSecurity/status/1765837749611905455) for the TFI Kickstarter has an image attached.
 
-![image from the announcement](/images/announcement.jpg)
+![image from the announcement](./images/announcement.jpg)
 
 This image has a pretty interesting string of digits on the side.
 
