@@ -319,7 +319,9 @@ Waiting on the 3-month solution embargo, look back here soon.
 <div class="row">
 <div class="column">
 
-The 12th issue will come out in April 2026.
+The 12th issue came out in April 2026.
+
+Waiting on the 3-month solution embargo, look back here soon.
 
 </div>
 <div class="column img-column">
@@ -335,7 +337,9 @@ The 12th issue will come out in April 2026.
 <div class="row">
 <div class="column">
 
-The 13th issue will come out in May 2026.
+The 13th issue came out in May 2026.
+
+Waiting on the 3-month solution embargo, look back here soon.
 
 </div>
 <div class="column img-column">
