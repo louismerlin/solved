@@ -39,7 +39,7 @@ Here are links to other people who are doing the same thing:
 
 <br>
 
-[01](#issue-01) | [02](#issue-02) | [03](#issue-03) | [04](#issue-04) | [05](#issue-05) | [06](#issue-06) | [07](#issue-07) | [08](#issue-08) | [09](#issue-09) | [10](#issue-10) | [11](#issue-11) | [12](#issue-12) | [13](#issue-13) | [14](#issue-14) | [15](#issue-15) | [Other](#other-99)
+[01](#issue-01) | [02](#issue-02) | [03](#issue-03) | [04](#issue-04) | [05](#issue-05) | [06](#issue-06) | [07](#issue-07) | [08](#issue-08) | [09](#issue-09) | [10](#issue-10) | [11](#issue-11) | [12](#issue-12) | [13](#issue-13) | [14](#issue-14) | [15](#issue-15) | [16](#issue-16) | [Other](#other-99)
 
 <br>
 
@@ -372,7 +372,7 @@ The 14th issue will come out in June 2026.
 
 <br>
 
-## <a id="issue-14"></a> 15 - TBD
+## <a id="issue-15"></a> 15 - TBD
 
 <div class="row">
 <div class="column">
@@ -381,7 +381,22 @@ The 15th issue will come out in July 2026.
 
 </div>
 <div class="column img-column">
-<img alt="14 (PSYCHORAPTURE, pt. 2) Cover" src="./images/15.jpg">
+<img alt="15 (TBD) Cover" src="./images/15.jpg">
+</div>
+</div>
+
+<br>
+
+## <a id="issue-16"></a> 16 - TBD
+
+<div class="row">
+<div class="column">
+
+The 16th issue will come out in August 2026.
+
+</div>
+<div class="column img-column">
+<img alt="16 (TBD) Cover" src="./images/16.jpg">
 </div>
 </div>
 
