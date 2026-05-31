@@ -178,7 +178,7 @@ MAC Address: 9A:E5:BC:26:DD:D3 (Unknown)
 
 Nmap done: 1 IP address (1 host up) scanned in 1.62 seconds
 </code></pre>
-<p>Ok, port 8000, this is a typical development http port, let's <code>curl</code> that.</p>
+<p>Ok, port 8000, and with what looks like a simple http server, let's <code>curl</code> that.</p>
 <pre><code>root@lulzworld:~# curl 10.0.0.3:8000
 ###########
 
@@ -203,7 +203,7 @@ MAC Address: C2:21:31:9C:F9:14 (Unknown)
 
 Nmap done: 1 IP address (1 host up) scanned in 1.58 seconds
 </code></pre>
-<p>Port 22 is typically used for <code>ssh</code>, so let's try it.</p>
+<p>An ssh service on port 22, this is the default port for ssh. Let's try it.</p>
 <pre><code>root@lulzworld:~# ssh 10.0.0.25
 ###########
 
@@ -229,7 +229,26 @@ MAC Address: E6:B7:33:29:E4:00 (Unknown)
 
 Nmap done: 1 IP address (1 host up) scanned in 1.53 seconds
 </code></pre>
-<p>Ok, port 5000, no idea what this typically refers to, let's <code>curl</code> it and see what it replies.</p>
+<p>Ok, port 5000 has an <a href="https://en.wikipedia.org/wiki/Universal_Plug_and_Play">UPnP</a> service running.
+No idea how to interact with that, let's just curl it.</p>
+<pre><code>root@lulzworld:~# curl 10.0.0.76:5000
+curl: (56) Recv failure: Connection reset by peer
+</code></pre>
+<p>We need to diagnose what is running on that port. Let's use nmap again.</p>
+<pre><code>root@lulzworld:~# nmap -sV -p 5000 10.0.0.76
+Starting Nmap 7.80 ( https://nmap.org ) at 2026-05-31 12:23 UTC
+mass_dns: warning: Unable to determine any DNS servers. Reverse DNS is disabled. Try using --system-dns or specify valid servers with --dns-servers
+Nmap scan report for 10.0.0.76
+Host is up (0.000056s latency).
+
+PORT     STATE SERVICE  VERSION
+5000/tcp open  ssl/http BaseHTTPServer 0.6 (Python 3.11.13)
+MAC Address: 7A:0F:83:89:E9:ED (Unknown)
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 17.71 seconds```
+</code></pre>
+<p>Aha, so UPnP was a red herring, we're actually look at an ssl/http service, which serves <code>https</code>. Let's try executing an insecure https connection.</p>
 <pre><code>root@lulzworld:~# curl -k https://10.0.0.76:5000/
 ###########
 
