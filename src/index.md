@@ -285,7 +285,13 @@ The 9th issue came out in January 2026.
 
 The 10th issue came out in February 2026.
 
-Waiting on the 3-month solution embargo, look back here soon.
+### [Cover Challenge](./10/cover.html)
+
+### [Crack the \*\*\*\*\*\*](./10/crack.html)
+
+### [Challenge #1 - Viral](./10/1.html)
+
+### [Challenge #2 - Backwards](./10/2.html)
 
 </div>
 <div class="column img-column">
