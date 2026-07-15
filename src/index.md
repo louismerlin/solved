@@ -39,7 +39,7 @@ Here are links to other people who are doing the same thing:
 
 <br>
 
-[01](#issue-01) | [02](#issue-02) | [03](#issue-03) | [04](#issue-04) | [05](#issue-05) | [06](#issue-06) | [07](#issue-07) | [08](#issue-08) | [09](#issue-09) | [10](#issue-10) | [11](#issue-11) | [12](#issue-12) | [13](#issue-13) | [14](#issue-14) | [15](#issue-15) | [16](#issue-16) | [Other](#other-99)
+[01](#issue-01) | [02](#issue-02) | [03](#issue-03) | [04](#issue-04) | [05](#issue-05) | [06](#issue-06) | [07](#issue-07) | [08](#issue-08) | [09](#issue-09) | [10](#issue-10) | [11](#issue-11) | [12](#issue-12) | [13](#issue-13) | [14](#issue-14) | [15](#issue-15) | [16](#issue-16) | [17](#issue-17) | [Other](#other-99)
 
 <br>
 
@@ -68,9 +68,7 @@ The OGN issue came out in May 2025.
 
 ### [Challenge #7](./01/7.html)
 
-### Challenge #8
-
-We're not allowed to share this one, but maybe you can find a second-hand copy of the Kickstarter edition of OGN on eBay, that's what I did.
+### [Challenge #8](./01/8.html)
 
 </div>
 <div class="column img-column">
@@ -309,7 +307,13 @@ The 10th issue came out in February 2026.
 
 The 11th issue came out in March 2026.
 
-Waiting on the 3-month solution embargo, look back here soon.
+### [Cover Challenge](./11/cover.html)
+
+### [Crack the \*\*\*\*\*\*](./11/crack.html)
+
+### [Challenge #1 - Water Trap](./11/1.html)
+
+### [Challenge #2](./11/2.html)
 
 </div>
 <div class="column img-column">
@@ -327,7 +331,15 @@ Waiting on the 3-month solution embargo, look back here soon.
 
 The 12th issue came out in April 2026.
 
-Waiting on the 3-month solution embargo, look back here soon.
+### [Cover Challenge](./12/cover.html)
+
+### [Crack the \*\*\*\*\*\*](./12/crack.html)
+
+### [Challenge #1](./12/1.html)
+
+### [Challenge #2](./12/2.html)
+
+### [OGN Challenge #8](./01/8.html)
 
 </div>
 <div class="column img-column">
@@ -361,7 +373,9 @@ Waiting on the 3-month solution embargo, look back here soon.
 <div class="row">
 <div class="column">
 
-The 14th issue will come out in June 2026.
+The 14th issue came out in June 2026.
+
+Waiting on the 3-month solution embargo, look back here soon.
 
 </div>
 <div class="column img-column">
@@ -372,16 +386,18 @@ The 14th issue will come out in June 2026.
 
 <br>
 
-## <a id="issue-15"></a> 15 - TBD
+## <a id="issue-15"></a> 15 - PSYCHORAPTURE, pt. 3
 
 <div class="row">
 <div class="column">
 
-The 15th issue will come out in July 2026.
+The 15th issue came out in July 2026.
+
+Waiting on the 3-month solution embargo, look back here soon.
 
 </div>
 <div class="column img-column">
-<img alt="15 (TBD) Cover" src="./images/15.jpg">
+<img alt="15 (PSYCHORAPTURE, pt. 3) Cover" src="./images/15.jpg">
 </div>
 </div>
 
@@ -397,6 +413,21 @@ The 16th issue will come out in August 2026.
 </div>
 <div class="column img-column">
 <img alt="16 (TBD) Cover" src="./images/16.jpg">
+</div>
+</div>
+
+<br>
+
+## <a id="issue-17"></a> 17 - TBD
+
+<div class="row">
+<div class="column">
+
+The 17th issue will come out in September 2026.
+
+</div>
+<div class="column img-column">
+<img alt="17 (TBD) Cover" src="./images/17.jpg">
 </div>
 </div>
 
