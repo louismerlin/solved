@@ -358,6 +358,7 @@ The 12th issue came out in April 2026.
 The 13th issue came out in May 2026.
 
 ### [Cover Challenge](./13/cover.html)
+### [Crack the \*\*\*\*\*\*](./13/crack.html)
 
 Working on the other writeups, come back soon.
 
