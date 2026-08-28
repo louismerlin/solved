@@ -406,7 +406,7 @@ Waiting on the 3-month solution embargo, look back here soon.
 
 <br>
 
-## <a id="issue-16"></a> 16 - TBD
+## <a id="issue-16"></a> 16 - PSYCHORAPTURE, pt. 4
 
 <div class="row">
 <div class="column">
@@ -417,13 +417,13 @@ Waiting on the 3-month solution embargo, look back here soon.
 
 </div>
 <div class="column img-column">
-<img alt="16 (TBD) Cover" src="./images/16.jpg">
+<img alt="16 (PSYCHORAPTURE, pt. 4) Cover" src="./images/16.jpg">
 </div>
 </div>
 
 <br>
 
-## <a id="issue-17"></a> 17 - TBD
+## <a id="issue-17"></a> 17 - PSYCHORAPTURE, pt. 5
 
 <div class="row">
 <div class="column">
@@ -432,7 +432,7 @@ The 17th issue will come out in September 2026.
 
 </div>
 <div class="column img-column">
-<img alt="17 (TBD) Cover" src="./images/17.jpg">
+<img alt="17 (PSYCHORAPTURE, pt. 5) Cover" src="./images/17.jpg">
 </div>
 </div>
 
