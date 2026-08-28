@@ -411,7 +411,9 @@ Waiting on the 3-month solution embargo, look back here soon.
 <div class="row">
 <div class="column">
 
-The 16th issue will come out in August 2026.
+The 16th issue came out in August 2026.
+
+Waiting on the 3-month solution embargo, look back here soon.
 
 </div>
 <div class="column img-column">
@@ -431,6 +433,22 @@ The 17th issue will come out in September 2026.
 </div>
 <div class="column img-column">
 <img alt="17 (TBD) Cover" src="./images/17.jpg">
+</div>
+</div>
+
+<br>
+
+## <a id="issue-18"></a> 18 - TBD
+
+<div class="row">
+<div class="column">
+
+The 18th issue will come out in October 2026.
+
+</div>
+<div class="column img-column">
+<img alt="18 (TBD) Cover" src="./images/18.jpg">
+<img alt="18 (TBD) Alternative Cover" src="./images/18b.jpg">
 </div>
 </div>
 
