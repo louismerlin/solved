@@ -359,8 +359,8 @@ The 13th issue came out in May 2026.
 
 ### [Cover Challenge](./13/cover.html)
 ### [Crack the \*\*\*\*\*\*](./13/crack.html)
-
-Working on the other writeups, come back soon.
+### [Challenge #1 - Axon](./13/1.html)
+### [Challenge #2 - Council](./13/2.html)
 
 </div>
 <div class="column img-column">
