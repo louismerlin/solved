@@ -73,6 +73,7 @@ The OGN issue came out in May 2025.
 </div>
 <div class="column img-column">
 <img alt="OGN Cover" src="./images/01.jpg">
+<img alt="OGN Alternative Cover" src="./images/01b.jpg">
 </div>
 </div>
 
