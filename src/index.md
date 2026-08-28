@@ -313,7 +313,7 @@ The 11th issue came out in March 2026.
 
 ### [Challenge #1 - Water Trap](./11/1.html)
 
-### [Challenge #2](./11/2.html)
+### [Challenge #2 - In Between](./11/2.html)
 
 </div>
 <div class="column img-column">
@@ -335,9 +335,9 @@ The 12th issue came out in April 2026.
 
 ### [Crack the \*\*\*\*\*\*](./12/crack.html)
 
-### [Challenge #1](./12/1.html)
+### [Challenge #1 - Fidget Spinner](./12/1.html)
 
-### [Challenge #2](./12/2.html)
+### [Challenge #2 - Fire](./12/2.html)
 
 ### [OGN Challenge #8](./01/8.html)
 
