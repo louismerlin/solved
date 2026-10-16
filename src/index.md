@@ -379,7 +379,10 @@ The 13th issue came out in May 2026.
 
 The 14th issue came out in June 2026.
 
-Waiting on the 3-month solution embargo, look back here soon.
+### [Cover Challenge](./14/cover.html)
+### [Crack the \*\*\*\*\*\*](./14/crack.html)
+### [Challenge #1 - Alias](./14/1.html)
+### [Challenge #2 - Scout](./14/2.html)
 
 </div>
 <div class="column img-column">
